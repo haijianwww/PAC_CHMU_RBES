@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deploy
+ date="2025.10.24.08:18:47"
+ outputDirectory="C:/Users/11755/Downloads/ASPLOS-2025-M5-main/ASPLOS-2025-M5-main/hw/m5_rtl/pac_m5_cm32k/hardware_test_design/common/signalTap_updateLogic/">
+ <perimeter>
+  <parameter
+     name="AUTO_GENERATION_ID"
+     type="Integer"
+     defaultValue="0"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_UNIQUE_ID"
+     type="String"
+     defaultValue=""
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_FAMILY"
+     type="String"
+     defaultValue="Agilex 7"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE"
+     type="String"
+     defaultValue="AGIB027R29A1E2VR3"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_SPEEDGRADE"
+     type="String"
+     defaultValue="2"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_BOARD"
+     type="String"
+     defaultValue="default"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_ACQ_CLK_CLOCK_RATE"
+     type="Long"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_ACQ_CLK_CLOCK_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_ACQ_CLK_RESET_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <interface name="tap" kind="conduit" start="0">
+   <property name="associatedClock" value="acq_clk" />
+   <property name="associatedReset" value="" />
+   <property name="prSafe" value="false" />
+   <port name="acq_data_in" direction="input" role="acq_data_in" width="64" />
+   <port
+       name="acq_trigger_in"
+       direction="input"
+       role="acq_trigger_in"
+       width="1" />
+  </interface>
+  <interface name="acq_clk" kind="clock" start="0">
+   <property name="clockRate" value="0" />
+   <property name="externallyDriven" value="false" />
+   <property name="ptfSchematicName" value="" />
+   <port name="acq_clk" direction="input" role="clk" width="1" />
+  </interface>
+ </perimeter>
+ <entity
+   kind="signalTap_updateLogic"
+   version="1.0"
+   name="signalTap_updateLogic">
+  <parameter name="AUTO_ACQ_CLK_CLOCK_RATE" value="-1" />
+  <parameter name="AUTO_ACQ_CLK_CLOCK_DOMAIN" value="-1" />
+  <parameter name="AUTO_GENERATION_ID" value="0" />
+  <parameter name="AUTO_DEVICE" value="AGIB027R29A1E2VR3" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Agilex 7" />
+  <parameter name="AUTO_BOARD" value="default" />
+  <parameter name="AUTO_ACQ_CLK_RESET_DOMAIN" value="-1" />
+  <parameter name="AUTO_UNIQUE_ID" value="" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="2" />
+  <generatedFiles>
+   <file
+       path="C:\Users\11755\Downloads\ASPLOS-2025-M5-main\ASPLOS-2025-M5-main\hw\m5_rtl\pac_m5_cm32k\hardware_test_design\common\signalTap_updateLogic\synth\signalTap_updateLogic.v"
+       attributes="CONTAINS_INLINE_CONFIGURATION" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="C:\Users\11755\Downloads\ASPLOS-2025-M5-main\ASPLOS-2025-M5-main\hw\m5_rtl\pac_m5_cm32k\hardware_test_design\common\signalTap_updateLogic\synth\signalTap_updateLogic.v"
+       attributes="CONTAINS_INLINE_CONFIGURATION" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file
+       path="C:/Users/11755/Downloads/ASPLOS-2025-M5-main/ASPLOS-2025-M5-main/hw/m5_rtl/pac_m5_cm32k/hardware_test_design/common/signalTap_updateLogic.ip" />
+  </sourceFiles>
+  <childSourceFiles>
+   <file
+       path="C:/intelfpga_pro/24.3/ip/altera/sld/jtag/altera_signaltap_ii_logic_analyzer/altera_signaltap_ii_logic_analyzer_hw.tcl" />
+  </childSourceFiles>
+  <messages>
+   <message level="Info" culprit="signalTap_updateLogic">"Generating: signalTap_updateLogic"</message>
+   <message level="Info" culprit="signalTap_updateLogic">"Generating: sld_signaltap_syn"</message>
+  </messages>
+ </entity>
+ <entity
+   kind="altera_signaltap_ii_logic_analyzer"
+   version="19.2.0"
+   name="sld_signaltap_syn">
+  <parameter name="SLD_INCREMENTAL_ROUTING" value="0" />
+  <parameter name="SLD_TRIGGER_LEVEL" value="1" />
+  <parameter name="SLD_TRIGGER_PIPELINE" value="0" />
+  <parameter name="SLD_COUNTER_PIPELINE" value="0" />
+  <parameter name="SLD_NODE_INFO" value="806383104" />
+  <parameter name="SLD_TRIGGER_IN_ENABLED" value="0" />
+  <parameter name="gui_sq" value="Continuous" />
+  <parameter name="gui_ram_type" value="AUTO" />
+  <parameter name="device_family" value="Agilex 7" />
+  <parameter name="gui_trigger_out_enabled" value="false" />
+  <parameter name="SLD_ENABLE_ADVANCED_TRIGGER" value="0" />
+  <parameter name="SLD_RAM_PIPELINE" value="0" />
+  <parameter name="SLD_STORAGE_QUALIFIER_GAP_RECORD" value="0" />
+  <parameter name="SLD_SEGMENT_SIZE" value="0" />
+  <parameter name="SLD_NODE_CRC_BITS" value="32" />
+  <parameter name="SLD_DATA_BITS" value="64" />
+  <parameter name="gui_use_segmented" value="false" />
+  <parameter name="SLD_STORAGE_QUALIFIER_MODE" value="OFF" />
+  <parameter name="SLD_NODE_CRC_HIWORD" value="48467" />
+  <parameter name="SLD_PIPELINE_FACTOR" value="0" />
+  <parameter name="gui_sample_per_segment" value="" />
+  <parameter name="SLD_TRIGGER_BITS" value="1" />
+  <parameter name="SLD_TRIGGER_LEVEL_PIPELINE" value="1" />
+  <parameter name="SLD_NODE_CRC_LOWORD" value="65147" />
+  <parameter name="gui_num_segments" value="2" />
+  <parameter name="SLD_SAMPLE_DEPTH" value="128" />
+  <parameter name="SLD_RAM_BLOCK_TYPE" value="AUTO" />
+  <generatedFiles>
+   <file
+       path="C:\Users\11755\Downloads\ASPLOS-2025-M5-main\ASPLOS-2025-M5-main\hw\m5_rtl\pac_m5_cm32k\hardware_test_design\common\signalTap_updateLogic\altera_signaltap_ii_logic_analyzer_1920\synth\sld_signaltap_syn.vhd"
+       attributes="" />
+   <file
+       path="C:\Users\11755\Downloads\ASPLOS-2025-M5-main\ASPLOS-2025-M5-main\hw\m5_rtl\pac_m5_cm32k\hardware_test_design\common\signalTap_updateLogic\altera_signaltap_ii_logic_analyzer_1920\synth\intel_signal_tap.sdc"
+       attributes="NO_SDC_PROMOTION" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="C:\Users\11755\Downloads\ASPLOS-2025-M5-main\ASPLOS-2025-M5-main\hw\m5_rtl\pac_m5_cm32k\hardware_test_design\common\signalTap_updateLogic\altera_signaltap_ii_logic_analyzer_1920\synth\sld_signaltap_syn.vhd"
+       attributes="" />
+   <file
+       path="C:\Users\11755\Downloads\ASPLOS-2025-M5-main\ASPLOS-2025-M5-main\hw\m5_rtl\pac_m5_cm32k\hardware_test_design\common\signalTap_updateLogic\altera_signaltap_ii_logic_analyzer_1920\synth\intel_signal_tap.sdc"
+       attributes="NO_SDC_PROMOTION" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file
+       path="C:/intelfpga_pro/24.3/ip/altera/sld/jtag/altera_signaltap_ii_logic_analyzer/altera_signaltap_ii_logic_analyzer_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator
+     instantiator="signalTap_updateLogic"
+     as="signaltap_ii_logic_analyzer_0" />
+  <messages>
+   <message level="Info" culprit="signalTap_updateLogic">"Generating: sld_signaltap_syn"</message>
+  </messages>
+ </entity>
+</deploy>

@@ -1,0 +1,9 @@
+Synthesis Status : Successful - Mon Nov  3 15:56:23 2025
+Revision Name : cxltyp2_ed
+Top-level Entity Name : cxltyp2_ed
+Family : Agilex 7
+Quartus Prime Version : 24.3.0 Build 212 11/18/2024 SC Pro Edition
+Device : AGIB027R29A1E2VR3
+Logic utilization estimate (in ALMs) : 142,645 / 912,800 ( 16 % )
+Total dedicated logic registers : 259646
+Estimated DSP Blocks Post-Merging : 0

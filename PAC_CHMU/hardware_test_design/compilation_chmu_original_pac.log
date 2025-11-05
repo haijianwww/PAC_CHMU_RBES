@@ -1,0 +1,120 @@
+Info: *******************************************************************
+Info: Running Quartus Prime Shell
+    Info: Version 24.3.0 Build 212 11/18/2024 SC Pro Edition
+    Info: Copyright (C) 2024  Intel Corporation. All rights reserved.
+    Info: Your use of Intel Corporation's design tools, logic functions 
+    Info: and other software and tools, and any partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Intel Program License 
+    Info: Subscription Agreement, the Intel Quartus Prime License Agreement,
+    Info: the Intel FPGA IP License Agreement, or other applicable license
+    Info: agreement, including, without limitation, that your use is for
+    Info: the sole purpose of programming logic devices manufactured by
+    Info: Intel and sold by Intel or its authorized distributors.  Please
+    Info: refer to the Intel FPGA Software License Subscription Agreements 
+    Info: on the Quartus Prime software download page.
+    Info: Processing started: Sun Nov  2 18:14:47 2025
+    Info: System process ID: 73196
+Info: Command: quartus_sh --flow compile cxltyp2_ed
+Info: Quartus(args): compile cxltyp2_ed
+Warning (292006): Can't contact license server "27000@192.17.100.7" -- this server will be ignored.
+Info: Project Name = C:/Users/11755/Downloads/PAC_CHMU/Intel/hardware_test_design/cxltyp2_ed
+Info: Revision Name = cxltyp2_ed
+Warning (125092): Tcl Script file ./constraints/cxltyp2_quartus_constraints_ed_en.tcl not found.
+Warning (125092): Tcl Script file ./constraints/qsf_device_pinout.tcl not found.
+Info: Run task: IP Generation
+Warning (292006): Can't contact license server "27000@192.17.100.7" -- this server will be ignored.
+Warning (125092): Tcl Script file ./constraints/cxltyp2_quartus_constraints_ed_en.tcl not found.
+Warning (125092): Tcl Script file ./constraints/qsf_device_pinout.tcl not found.
+Info: *******************************************************************
+Info: Running Quartus Prime IP Generation Tool
+    Info: Version 24.3.0 Build 212 11/18/2024 SC Pro Edition
+    Info: Processing started: Sun Nov  2 18:15:01 2025
+    Info: System process ID: 74952
+Info: Command: quartus_ipgenerate cxltyp2_ed -c cxltyp2_ed --run_default_mode_op
+Info: Found 24 IP file(s) in the project.
+    Info: IP file C:/Users/11755/Downloads/PAC_CHMU/Intel/hardware_test_design/common/intel_reset_release/intel_reset_release.ip was found in the project.
+    Info: IP file C:/Users/11755/Downloads/PAC_CHMU/Intel/intel_rtile_cxl_top_cxltyp2_ed.ip was found in the project.
+    Info: IP file C:/Users/11755/Downloads/PAC_CHMU/Intel/hardware_test_design/common/BRAM/port_1_ram.ip was found in the project.
+    Info: IP file C:/Users/11755/Downloads/PAC_CHMU/Intel/hardware_test_design/common/buf_512w_16384d.ip was found in the project.
+    Info: IP file C:/Users/11755/Downloads/PAC_CHMU/Intel/hardware_test_design/IP/bram/w32_d1024.ip was found in the project.
+    Info: IP file C:/Users/11755/Downloads/PAC_CHMU/Intel/hardware_test_design/IP/bram/w64_d8192.ip was found in the project.
+    Info: IP file C:/Users/11755/Downloads/PAC_CHMU/Intel/hardware_test_design/common/cdc_fifos/fifo_8b_256w_show_ahead.ip was found in the project.
+    Info: IP file C:/Users/11755/Downloads/PAC_CHMU/Intel/hardware_test_design/common/cdc_fifos/cfg_to_iosf_fifo_vcd_ED.ip was found in the project.
+    Info: IP file C:/Users/11755/Downloads/PAC_CHMU/Intel/hardware_test_design/common/cdc_fifos/iosf_to_cfg_fifo_vcd_ED.ip was found in the project.
+    Info: IP file C:/Users/11755/Downloads/PAC_CHMU/Intel/hardware_test_design/common/chmu/ip/fifo_w32_d256.ip was found in the project.
+    Info: IP file C:/Users/11755/Downloads/PAC_CHMU/Intel/hardware_test_design/common/chmu/ip/port_2_ram.ip was found in the project.
+    Info: IP file C:/Users/11755/Downloads/PAC_CHMU/Intel/hardware_test_design/common/mc_top/altecc_enc_dec_ip/altecc_enc_latency0.ip was found in the project.
+    Info: IP file C:/Users/11755/Downloads/PAC_CHMU/Intel/hardware_test_design/common/mc_top/altecc_enc_dec_ip/altecc_dec_latency1.ip was found in the project.
+    Info: IP file C:/Users/11755/Downloads/PAC_CHMU/Intel/hardware_test_design/common/mc_top/altecc_enc_dec_ip/altecc_dec_latency2.ip was found in the project.
+    Info: IP file C:/Users/11755/Downloads/PAC_CHMU/Intel/hardware_test_design/common/mc_top/emif_ip/emif_cal_one_ch.ip was found in the project.
+    Info: IP file C:/Users/11755/Downloads/PAC_CHMU/Intel/hardware_test_design/common/mc_top/emif_ip/emif.ip was found in the project.
+    Info: IP file C:/Users/11755/Downloads/PAC_CHMU/Intel/hardware_test_design/common/mc_top/emif2_ip/emif2.ip was found in the project.
+    Info: IP file C:/Users/11755/Downloads/PAC_CHMU/Intel/hardware_test_design/common/mc_top/sip_quartus_ips/rspfifo_IP/rspfifo.ip was found in the project.
+    Info: IP file C:/Users/11755/Downloads/PAC_CHMU/Intel/hardware_test_design/common/mc_top/sip_quartus_ips/reqfifo_IP/reqfifo.ip was found in the project.
+    Info: IP file C:/Users/11755/Downloads/PAC_CHMU/Intel/hardware_test_design/common/buf_512w_65536d.ip was found in the project.
+    Info: IP file C:/Users/11755/Downloads/PAC_CHMU/Intel/hardware_test_design/common/signalTap_updateLogic.ip was found in the project.
+    Info: IP file C:/Users/11755/Downloads/PAC_CHMU/Intel/hardware_test_design/common/buf_512w_131072d.ip was found in the project.
+    Info: IP file C:/Users/11755/Downloads/PAC_CHMU/Intel/hardware_test_design/common/fifo_pac_overflow.ip was found in the project.
+    Info: IP file C:/Users/11755/Downloads/PAC_CHMU/Intel/hardware_test_design/IP/fifo/fifo_cdc.ip was found in the project.
+Info: Only synthesis files will be generated.
+Info: Performing IP Generation using the command line: c:/intelfpga_pro/24.3/quartus/../qsys/bin/qsys-generate.exe {--family=Agilex 7} --part=AGIB027R29A1E2VR3 --block-symbol-file --quartus-project=C:/Users/11755/Downloads/PAC_CHMU/Intel/hardware_test_design/cxltyp2_ed --rev=cxltyp2_ed --top-level-generation=true {--bypass-quartus-project } --synthesis=verilog --parallel=16 --batch=IP/fifo/fifo_cdc.ip --batch=IP/bram/w64_d8192.ip --batch=IP/bram/w32_d1024.ip ./../intel_rtile_cxl_top_cxltyp2_ed.ip
+Info: Batch generation will generate the listed files in this order: C:/Users/11755/Downloads/PAC_CHMU/Intel/intel_rtile_cxl_top_cxltyp2_ed.ip, IP/fifo/fifo_cdc.ip, IP/bram/w64_d8192.ip, IP/bram/w32_d1024.ip
+Error: Error opening C:/Users/11755/Downloads/PAC_CHMU/Intel/intel_rtile_cxl_top_cxltyp2_ed.ip.
+Info: Finished generating IP file(s) in the project.
+    Info: Previously generated synthesis files were detected in the Platform Designer IP file generation directory (C:/Users/11755/Downloads/PAC_CHMU/Intel/hardware_test_design/common/intel_reset_release/intel_reset_release).
+    Info: Skipped generation of synthesis files for the Platform Designer IP file common/intel_reset_release/intel_reset_release.ip based on the current regeneration policy setting (Tools/Options/IP Settings).
+    Info: Previously generated synthesis files were detected in the Platform Designer IP file generation directory (C:/Users/11755/Downloads/PAC_CHMU/Intel/hardware_test_design/common/BRAM/port_1_ram).
+    Info: Skipped generation of synthesis files for the Platform Designer IP file common/BRAM/port_1_ram.ip based on the current regeneration policy setting (Tools/Options/IP Settings).
+    Info: Previously generated synthesis files were detected in the Platform Designer IP file generation directory (C:/Users/11755/Downloads/PAC_CHMU/Intel/hardware_test_design/common/buf_512w_16384d).
+    Info: Skipped generation of synthesis files for the Platform Designer IP file common/buf_512w_16384d.ip based on the current regeneration policy setting (Tools/Options/IP Settings).
+    Info: Previously generated synthesis files were detected in the Platform Designer IP file generation directory (C:/Users/11755/Downloads/PAC_CHMU/Intel/hardware_test_design/./common/cdc_fifos/fifo_8b_256w_show_ahead).
+    Info: Skipped generation of synthesis files for the Platform Designer IP file ./common/cdc_fifos/fifo_8b_256w_show_ahead.ip based on the current regeneration policy setting (Tools/Options/IP Settings).
+    Info: Previously generated synthesis files were detected in the Platform Designer IP file generation directory (C:/Users/11755/Downloads/PAC_CHMU/Intel/hardware_test_design/./common/cdc_fifos/cfg_to_iosf_fifo_vcd_ED).
+    Info: Skipped generation of synthesis files for the Platform Designer IP file ./common/cdc_fifos/cfg_to_iosf_fifo_vcd_ED.ip based on the current regeneration policy setting (Tools/Options/IP Settings).
+    Info: Previously generated synthesis files were detected in the Platform Designer IP file generation directory (C:/Users/11755/Downloads/PAC_CHMU/Intel/hardware_test_design/./common/cdc_fifos/iosf_to_cfg_fifo_vcd_ED).
+    Info: Skipped generation of synthesis files for the Platform Designer IP file ./common/cdc_fifos/iosf_to_cfg_fifo_vcd_ED.ip based on the current regeneration policy setting (Tools/Options/IP Settings).
+    Info: Previously generated synthesis files were detected in the Platform Designer IP file generation directory (C:/Users/11755/Downloads/PAC_CHMU/Intel/hardware_test_design/./common/chmu/ip/fifo_w32_d256).
+    Info: Skipped generation of synthesis files for the Platform Designer IP file ./common/chmu/ip/fifo_w32_d256.ip based on the current regeneration policy setting (Tools/Options/IP Settings).
+    Info: Previously generated synthesis files were detected in the Platform Designer IP file generation directory (C:/Users/11755/Downloads/PAC_CHMU/Intel/hardware_test_design/./common/chmu/ip/port_2_ram).
+    Info: Skipped generation of synthesis files for the Platform Designer IP file ./common/chmu/ip/port_2_ram.ip based on the current regeneration policy setting (Tools/Options/IP Settings).
+    Info: Previously generated synthesis files were detected in the Platform Designer IP file generation directory (C:/Users/11755/Downloads/PAC_CHMU/Intel/hardware_test_design/./common/mc_top/altecc_enc_dec_ip/altecc_enc_latency0).
+    Info: Skipped generation of synthesis files for the Platform Designer IP file ./common/mc_top/altecc_enc_dec_ip/altecc_enc_latency0.ip based on the current regeneration policy setting (Tools/Options/IP Settings).
+    Info: Previously generated synthesis files were detected in the Platform Designer IP file generation directory (C:/Users/11755/Downloads/PAC_CHMU/Intel/hardware_test_design/./common/mc_top/altecc_enc_dec_ip/altecc_dec_latency1).
+    Info: Skipped generation of synthesis files for the Platform Designer IP file ./common/mc_top/altecc_enc_dec_ip/altecc_dec_latency1.ip based on the current regeneration policy setting (Tools/Options/IP Settings).
+    Info: Previously generated synthesis files were detected in the Platform Designer IP file generation directory (C:/Users/11755/Downloads/PAC_CHMU/Intel/hardware_test_design/./common/mc_top/altecc_enc_dec_ip/altecc_dec_latency2).
+    Info: Skipped generation of synthesis files for the Platform Designer IP file ./common/mc_top/altecc_enc_dec_ip/altecc_dec_latency2.ip based on the current regeneration policy setting (Tools/Options/IP Settings).
+    Info: Previously generated synthesis files were detected in the Platform Designer IP file generation directory (C:/Users/11755/Downloads/PAC_CHMU/Intel/hardware_test_design/./common/mc_top/emif_ip/emif_cal_one_ch).
+    Info: Skipped generation of synthesis files for the Platform Designer IP file ./common/mc_top/emif_ip/emif_cal_one_ch.ip based on the current regeneration policy setting (Tools/Options/IP Settings).
+    Info: Previously generated synthesis files were detected in the Platform Designer IP file generation directory (C:/Users/11755/Downloads/PAC_CHMU/Intel/hardware_test_design/./common/mc_top/emif_ip/emif).
+    Info: Skipped generation of synthesis files for the Platform Designer IP file ./common/mc_top/emif_ip/emif.ip based on the current regeneration policy setting (Tools/Options/IP Settings).
+    Info: Previously generated synthesis files were detected in the Platform Designer IP file generation directory (C:/Users/11755/Downloads/PAC_CHMU/Intel/hardware_test_design/./common/mc_top/emif2_ip/emif2).
+    Info: Skipped generation of synthesis files for the Platform Designer IP file ./common/mc_top/emif2_ip/emif2.ip based on the current regeneration policy setting (Tools/Options/IP Settings).
+    Info: Previously generated synthesis files were detected in the Platform Designer IP file generation directory (C:/Users/11755/Downloads/PAC_CHMU/Intel/hardware_test_design/./common/mc_top/sip_quartus_ips/rspfifo_IP/rspfifo).
+    Info: Skipped generation of synthesis files for the Platform Designer IP file ./common/mc_top/sip_quartus_ips/rspfifo_IP/rspfifo.ip based on the current regeneration policy setting (Tools/Options/IP Settings).
+    Info: Previously generated synthesis files were detected in the Platform Designer IP file generation directory (C:/Users/11755/Downloads/PAC_CHMU/Intel/hardware_test_design/./common/mc_top/sip_quartus_ips/reqfifo_IP/reqfifo).
+    Info: Skipped generation of synthesis files for the Platform Designer IP file ./common/mc_top/sip_quartus_ips/reqfifo_IP/reqfifo.ip based on the current regeneration policy setting (Tools/Options/IP Settings).
+    Info: Previously generated synthesis files were detected in the Platform Designer IP file generation directory (C:/Users/11755/Downloads/PAC_CHMU/Intel/hardware_test_design/common/buf_512w_65536d).
+    Info: Skipped generation of synthesis files for the Platform Designer IP file common/buf_512w_65536d.ip based on the current regeneration policy setting (Tools/Options/IP Settings).
+    Info: Previously generated synthesis files were detected in the Platform Designer IP file generation directory (C:/Users/11755/Downloads/PAC_CHMU/Intel/hardware_test_design/common/signalTap_updateLogic).
+    Info: Skipped generation of synthesis files for the Platform Designer IP file common/signalTap_updateLogic.ip based on the current regeneration policy setting (Tools/Options/IP Settings).
+    Info: Previously generated synthesis files were detected in the Platform Designer IP file generation directory (C:/Users/11755/Downloads/PAC_CHMU/Intel/hardware_test_design/common/buf_512w_131072d).
+    Info: Skipped generation of synthesis files for the Platform Designer IP file common/buf_512w_131072d.ip based on the current regeneration policy setting (Tools/Options/IP Settings).
+    Info: Previously generated synthesis files were detected in the Platform Designer IP file generation directory (C:/Users/11755/Downloads/PAC_CHMU/Intel/hardware_test_design/common/fifo_pac_overflow).
+    Info: Skipped generation of synthesis files for the Platform Designer IP file common/fifo_pac_overflow.ip based on the current regeneration policy setting (Tools/Options/IP Settings).
+Error: Quartus Prime IP Generation Tool was unsuccessful. 1 error, 3 warnings
+    Error: Peak virtual memory: 320 megabytes
+    Error: Processing ended: Sun Nov  2 18:15:13 2025
+    Error: Elapsed time: 00:00:12
+    Error: System process ID: 74952
+Error (21794): Quartus Prime Full Compilation was unsuccessful. 3 errors, 3 warnings
+Error: Flow compile (for project C:/Users/11755/Downloads/PAC_CHMU/Intel/hardware_test_design/cxltyp2_ed) was not successful
+Error: run_flow flow:run1 finished: 0 Failed
+Error (23031): Evaluation of Tcl script c:/intelfpga_pro/24.3/quartus/common/tcl/internal/qsh_flowengine.tcl unsuccessful
+Error: Quartus Prime Shell was unsuccessful. 10 errors, 6 warnings
+    Error: Peak virtual memory: 332 megabytes
+    Error: Processing ended: Sun Nov  2 18:15:15 2025
+    Error: Elapsed time: 00:00:28
+    Error: System process ID: 73196

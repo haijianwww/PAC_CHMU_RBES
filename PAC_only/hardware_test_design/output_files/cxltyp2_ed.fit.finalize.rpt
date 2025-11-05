@@ -1,0 +1,88 @@
+Fitter Finalize Stage Report for cxltyp2_ed
+Tue Oct 28 11:03:25 2025
+Quartus Prime Version 24.3.0 Build 212 11/18/2024 SC Pro Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Routing Usage Summary
+  3. Finalize Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2024  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the Intel FPGA Software License Subscription Agreements 
+on the Quartus Prime software download page.
+
+
+
++---------------------------------------------------------------+
+; Routing Usage Summary                                         ;
++-----------------------------+---------------------------------+
+; Routing Resource Type       ; Usage                           ;
++-----------------------------+---------------------------------+
+; Block Input Mux Wrapbacks   ; 706 / 964,320 ( < 1 % )         ;
+; Block Input Muxes           ; 1,120,001 / 10,561,600 ( 11 % ) ;
+; Block interconnects         ; 821,343 / 12,385,280 ( 7 % )    ;
+; C1 interconnects            ; 461,524 / 5,173,760 ( 9 % )     ;
+; C4 interconnects            ; 241,379 / 4,933,120 ( 5 % )     ;
+; C8 interconnects            ; 14,431 / 493,312 ( 3 % )        ;
+; DCM_muxes                   ; 54 / 1,152 ( 5 % )              ;
+; DELAY_CHAINs                ; 32 / 32,048 ( < 1 % )           ;
+; Direct links                ; 111,254 / 12,385,280 ( < 1 % )  ;
+; HIO Buffers                 ; 1,931 / 73,472 ( 3 % )          ;
+; Programmable Invert Buffers ; 31 / 560 ( 6 % )                ;
+; Programmable Invert Inputs  ; 29,016 / 932,160 ( 3 % )        ;
+; Programmable Inverts        ; 29,016 / 932,160 ( 3 % )        ;
+; R0 interconnects            ; 556,260 / 8,632,960 ( 6 % )     ;
+; R1 interconnects            ; 343,701 / 4,933,120 ( 7 % )     ;
+; R12 interconnects           ; 18,551 / 739,968 ( 3 % )        ;
+; R2 interconnects            ; 151,576 / 2,473,120 ( 6 % )     ;
+; R4 interconnects            ; 121,179 / 2,486,240 ( 5 % )     ;
+; R6 interconnects            ; 160,605 / 2,492,800 ( 6 % )     ;
+; Redundancy Muxes            ; 3,481 / 145,648 ( 2 % )         ;
+; Row Clock Tap-Offs          ; 24,554 / 739,968 ( 3 % )        ;
+; Switchbox_clock_muxes       ; 268 / 23,040 ( 1 % )            ;
+; VIO Buffers                 ; 589 / 22,400 ( 3 % )            ;
+; Vertical_seam_tap_muxes     ; 248 / 12,288 ( 2 % )            ;
++-----------------------------+---------------------------------+
+
+
++-------------------+
+; Finalize Messages ;
++-------------------+
+Info (20032): Parallel compilation is enabled and will use up to 16 processors
+Info: *******************************************************************
+Info: Running Quartus Prime Fitter
+    Info: Version 24.3.0 Build 212 11/18/2024 SC Pro Edition
+    Info: Processing started: Tue Oct 28 09:14:31 2025
+    Info: System process ID: 27028
+Info: Command: quartus_fit --read_settings_files=on --write_settings_files=off cxltyp2_ed -c cxltyp2_ed
+Info: qfit2_default_script.tcl version: #1
+Info: Project  = cxltyp2_ed
+Info: Revision = cxltyp2_ed
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 100 degrees C
+Info (18258): Fitter Physical Synthesis operations beginning
+Info (18259): Fitter Physical Synthesis operations ending: elapsed time is 00:01:14
+Info (24616): Empty 'R-tile' indicated by pin 'AL20' has been preserved  due to PRESERVE_UNUSED_XCVR_CHANNEL instance assignment
+Info (24616): Empty 'F-tile' indicated by pin 'MB71' has been preserved  due to PRESERVE_UNUSED_XCVR_CHANNEL instance assignment
+Info (16557): Fitter post-fit operations ending: elapsed time is 00:04:13
+
+

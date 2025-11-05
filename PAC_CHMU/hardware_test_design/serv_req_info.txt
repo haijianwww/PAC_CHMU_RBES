@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<internal_error>
+	<sub_system>ERR</sub_system>
+	<callstack>	0x7ffaa53677d9: comp_qcu + 0xa77d9 (?get_cmp_report@@YAPEAVRDB_REPORT@@XZ + 0xd9)
+	0x7ffaa5369518: comp_qcu + 0xa9518 (?qcu_get_cmp_rpt_main_folder@@YAPEAVRDB_FOLDER_OBJECT@@XZ + 0x8)
+	0x7ff979f1ce3a: tsm_sta + 0x8ce3a (`anonymous namespace&amp;apos;::get_info_from_syn_rtlsdc_report + 0x7e)
+	0x7ff979f1c789: tsm_sta + 0x8c789 (import_cdb_constraints + 0x7d)
+	0x7ff979f19b84: tsm_sta + 0x89b84 (sta_read_sdc + 0x2a0)
+	 0x6be84640: tcl86 + 0x14640 (TclInvokeStringCommand + 0xf0)
+	 0x6be86442: tcl86 + 0x16442 (TclNRRunCallbacks + 0x62)
+	 0x6be87c4d: tcl86 + 0x17c4d (TclEvalEx + 0x9ed)
+	 0x6be87257: tcl86 + 0x17257 (Tcl_EvalEx + 0x27)
+	0x7ffa108e454a: tsm_tdc + 0x454a (TDC_STA_ACCESSORIES::tcl_eval + 0x2a)
+	0x7ffa108e438d: tsm_tdc + 0x438d (TDC_STA_ACCESSORIES::process_timing_constraints + 0xb5)
+	0x7ffa108e3e59: tsm_tdc + 0x3e59 (TDC_STA_ACCESSORIES::bringup_sta_from_scratch + 0x1a1)
+	0x7ff95a2f9471: fitter_fitcc + 0xd9471 (?setup_tdc_utility@FITCC_TDC_UTILITY@@AEAAXW4INVOKE_MODE@TDC_ACCESSORIES@@AEBV?$vector@VTDB_TIMING_MODEL@@V?$allocator@VTDB_TIMING_MODEL@@@std@@@std@@VPARAMS@1@@Z + 0x461)
+	0x7ff95a2f4a64: fitter_fitcc + 0xd4a64 (??0FITCC_TDC_UTILITY@@QEAA@PEBVFITCC_ENV@@W4INVOKE_MODE@TDC_ACCESSORIES@@AEBV?$vector@VTDB_TIMING_MODEL@@V?$allocator@VTDB_TIMING_MODEL@@@std@@@std@@AEBVPARAMS@0@@Z + 0xf4)
+	0x7ff95a29e8f3: fitter_fitcc + 0x7e8f3 (?get_tdc_utility_or_create_if_necessary@FITCC_ENV@@QEAAPEAVFITCC_TDC_UTILITY@@W4FITCC_TDC_UTILITY_REQUEST_TYPE@1@W4INVOKE_MODE@TDC_ACCESSORIES@@AEBV?$vector@VTDB_TIMING_MODEL@@V?$allocator@VTDB_TIMING_MODEL@@@std@@@std@@AEBVPARAMS@2@@Z + 0x473)
+	0x7ff95a29ef6b: fitter_fitcc + 0x7ef6b (?get_tdc_utility_or_create_if_necessary@FITCC_ENV@@QEAAPEAVFITCC_TDC_UTILITY@@W4FITCC_TDC_UTILITY_REQUEST_TYPE@1@W4INVOKE_MODE@TDC_ACCESSORIES@@W4dat_timing_models@@AEBVPARAMS@2@@Z + 0x6b)
+	0x7ff95af604dd: fitter_fdrgn + 0x504dd (`anonymous namespace&amp;apos;::perform_initial_post_plan_dat_and_timing_analysis + 0x107d)
+	0x7ff95af59c8f: fitter_fdrgn + 0x49c8f (?fdrgn_post_plan_ops@@YA_N_N@Z + 0x22f)
+	0x7ff94e898c22: comp_fit2 + 0x28c22 (fit2_fit_plan + 0x652)
+	 0x6be86442: tcl86 + 0x16442 (TclNRRunCallbacks + 0x62)
+	 0x6be87c4d: tcl86 + 0x17c4d (TclEvalEx + 0x9ed)
+	 0x6bf16a8b: tcl86 + 0xa6a8b (Tcl_FSEvalFileEx + 0x22b)
+	 0x6bf15136: tcl86 + 0xa5136 (Tcl_EvalFile + 0x36)
+	0x7ffad4c430ac: comp_qexe + 0x230ac (?qexe_evaluate_tcl_script@@YA_NAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z + 0x66c)
+	0x7ffad4c41be9: comp_qexe + 0x21be9 (qexe_do_tcl + 0x8f9)
+	0x7ffad4c4a1ad: comp_qexe + 0x2a1ad (?qexe_run_tcl_option@@YA_NPEAVQEXE_FRAMEWORK@@PEBDPEAV?$list@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@std@@_N@Z + 0x6cd)
+	0x7ffaa52ff22f: comp_qcu + 0x3f22f (?qcu_run_tcl_option@@YA_NPEAVQCU_FRAMEWORK@@PEBDPEAV?$list@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@std@@_N@Z + 0x6ef)
+	0x7ffad4c49969: comp_qexe + 0x29969 (qexe_run + 0x629)
+	0x7ffad4c4abd6: comp_qexe + 0x2abd6 (?qexe_standard_main@@YAHPEAVQEXE_FRAMEWORK@@PEAPEBUQEXE_OPTION_DEFINITION@@HPEAPEBD@Z + 0x266)
+	0x7ff66d32bd32: quartus_fit + 0xbd32 (?qfit2_main@@YAHHPEAPEBD@Z + 0x82)
+	0x7ffacea18368: ccl_msg + 0x28368 (?msg_main_thread@@YAPEAXPEAX@Z + 0x18)
+	0x7ffacea19572: ccl_msg + 0x29572 (?msg_thread_wrapper@@YAPEAXP6APEAXPEAX@Z0@Z + 0x82)
+	0x7ffacedab063: ccl_mem + 0x2b063 (?mem_thread_wrapper@@YAPEAXP6APEAXPEAX@Z0@Z + 0x73)
+	0x7ffacea1623f: ccl_msg + 0x2623f (?msg_exe_main@@YAHHPEAPEBDP6AHH0@Z@Z + 0x17f)
+	0x7ff66d32cfab: quartus_fit + 0xcfab (__scrt_common_main_seh + 0x10b)
+	0x7ffb025de8d6: KERNEL32 + 0x2e8d6 (BaseThreadInitThunk + 0x16)
+	0x7ffb034ac53b: ntdll + 0x8c53b (RtlUserThreadStart + 0x2b)
+</callstack>
+	<error>*** Fatal Error: cmp_report</error>
+	<date>Sun Nov  2 17:47:00 2025
+</date>
+	<version>Version 24.3.0 Build 212 11/18/2024 SC Pro Edition</version>
+</internal_error>

@@ -1,0 +1,12 @@
+# **************************************************
+# Quartus Prime Version 24.3.0
+# Process ID 42388
+# Start logging TCL commands
+# Mon Nov 3 18:38:47 2025
+# **************************************************
+project_open "cxltyp2_ed.qpf" -revision cxltyp2_ed
+project_close
+# **************************************************
+# Mon Nov 3 19:05:41 2025
+# End of logging TCL commands
+# **************************************************

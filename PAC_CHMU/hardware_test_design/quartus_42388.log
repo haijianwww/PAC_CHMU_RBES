@@ -1,0 +1,24 @@
+# **************************************************
+# Quartus Prime Version 24.3.0
+# Process ID 42388
+# Start logging UI actions
+# Mon Nov 3 18:38:47 2025
+# **************************************************
+[Mon Nov  3 18:38:53 2025] Window title: 'Quartus Prime' | QPushButton '&Yes' pressed!
+[Mon Nov  3 18:39:13 2025] [Action triggered] Window title: 'Quartus Prime Pro Edition - C:/Users/11755/Downloads/PAC_CHMU/Intel/hardware_test_design/cxltyp2_ed - cxltyp2_ed [*]' | P&rocessing > 'Compilation Dashboard' was pressed
+[Mon Nov  3 18:39:32 2025] [Action triggered] Window title: 'Quartus Prime Pro Edition - C:/Users/11755/Downloads/PAC_CHMU/Intel/hardware_test_design/cxltyp2_ed - cxltyp2_ed [*]' | &File > 'Programming File Generator...' was pressed
+[Mon Nov  3 18:39:39 2025] Window title: 'Programming File Generator - C:/Users/11755/Downloads/PAC_CHMU/Intel/hardware_test_design/cxltyp2_ed - cxltyp2_ed [*]' | 'm_mode_combo' combo box changed to: 'AVST x8'
+[Mon Nov  3 18:42:58 2025] Window title: 'Add Device' | 'm_device_combo' combo box changed to: 'CFI_2Gb'
+[Mon Nov  3 18:43:01 2025] Window title: 'Add Device' | QPushButton 'OK' pressed!
+[Mon Nov  3 18:43:13 2025] Window title: 'Edit Partition' | 'm_address_mode_combo' combo box changed to: 'Start'
+[Mon Nov  3 18:43:23 2025] Window title: 'Edit Partition' | QPushButton 'OK' pressed!
+[Mon Nov  3 18:43:23 2025] Window title: 'Programming File Generator - C:/Users/11755/Downloads/PAC_CHMU/Intel/hardware_test_design/cxltyp2_ed - cxltyp2_ed [*]' | QPushButton 'Edit...' pressed!
+[Mon Nov  3 18:43:32 2025] Window title: 'Add Partition' | 'm_input_file_combo' combo box changed to: 'Bitstream_1 (cxltyp2_ed.sof)'
+[Mon Nov  3 18:43:36 2025] Window title: 'Add Partition' | 'm_address_mode_combo' combo box changed to: 'Start'
+[Mon Nov  3 18:43:41 2025] Window title: 'Add Partition' | QPushButton 'OK' pressed!
+[Mon Nov  3 18:43:41 2025] Window title: 'Programming File Generator - C:/Users/11755/Downloads/PAC_CHMU/Intel/hardware_test_design/cxltyp2_ed - cxltyp2_ed [*]' | QPushButton 'Add Partition...' pressed!
+[Mon Nov  3 18:44:52 2025] Window title: 'Programming File Generator' | QPushButton 'OK' pressed!
+# **************************************************
+# Mon Nov 3 19:05:41 2025
+# End of logging UI actions
+# **************************************************

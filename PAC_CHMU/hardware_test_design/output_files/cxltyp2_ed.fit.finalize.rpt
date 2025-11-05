@@ -1,0 +1,103 @@
+Fitter Finalize Stage Report for cxltyp2_ed
+Mon Nov  3 17:24:01 2025
+Quartus Prime Version 24.3.0 Build 212 11/18/2024 SC Pro Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Top Ignored Large Hold-failing Connections
+  3. Routing Usage Summary
+  4. Finalize Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2024  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the Intel FPGA Software License Subscription Agreements 
+on the Quartus Prime software download page.
+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Top Ignored Large Hold-failing Connections                                                                                                                                                                                                                            ;
++------------------+--------------------------------------------+-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+
+; Worst hold slack ; Oterm name                                 ; Oterm TLP             ; To Node                                                                                                                                                ; Iterm TLP            ;
++------------------+--------------------------------------------+-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+
+; -122613          ; ed_top_wrapper_typ2_inst|ip2hdm_reset_n_ff ; LAB_RE:X213Y304Z0I109 ; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|GEN_CHAN_COUNT_REG_RSP_FIFO[0].reqfifo_inst|fifo_0|dcfifo_component|auto_generated|rdaclr|dffe3a[0] ; LAB_RE:X212Y304Z0I86 ;
+; -122600          ; ed_top_wrapper_typ2_inst|ip2hdm_reset_n_ff ; LAB_RE:X213Y304Z0I109 ; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|GEN_CHAN_COUNT_REG_RSP_FIFO[0].rspfifo_inst|fifo_0|dcfifo_component|auto_generated|wraclr|dffe3a[0] ; LAB_RE:X212Y304Z0I86 ;
+; -122599          ; ed_top_wrapper_typ2_inst|ip2hdm_reset_n_ff ; LAB_RE:X213Y304Z0I109 ; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|GEN_CHAN_COUNT_REG_RSP_FIFO[0].reqfifo_inst|fifo_0|dcfifo_component|auto_generated|rdaclr|dffe4a[0] ; LAB_RE:X212Y304Z0I86 ;
+; -122599          ; ed_top_wrapper_typ2_inst|ip2hdm_reset_n_ff ; LAB_RE:X213Y304Z0I109 ; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|GEN_CHAN_COUNT_REG_RSP_FIFO[0].rspfifo_inst|fifo_0|dcfifo_component|auto_generated|wraclr|dffe4a[0] ; LAB_RE:X212Y304Z0I86 ;
++------------------+--------------------------------------------+-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------+
+
+
++---------------------------------------------------------------+
+; Routing Usage Summary                                         ;
++-----------------------------+---------------------------------+
+; Routing Resource Type       ; Usage                           ;
++-----------------------------+---------------------------------+
+; Block Input Mux Wrapbacks   ; 681 / 964,320 ( < 1 % )         ;
+; Block Input Muxes           ; 1,048,364 / 10,561,600 ( 10 % ) ;
+; Block interconnects         ; 765,459 / 12,385,280 ( 6 % )    ;
+; C1 interconnects            ; 422,127 / 5,173,760 ( 8 % )     ;
+; C4 interconnects            ; 217,787 / 4,933,120 ( 4 % )     ;
+; C8 interconnects            ; 15,163 / 493,312 ( 3 % )        ;
+; DCM_muxes                   ; 54 / 1,152 ( 5 % )              ;
+; DELAY_CHAINs                ; 31 / 32,048 ( < 1 % )           ;
+; Direct links                ; 111,792 / 12,385,280 ( < 1 % )  ;
+; HIO Buffers                 ; 1,931 / 73,472 ( 3 % )          ;
+; Programmable Invert Buffers ; 31 / 560 ( 6 % )                ;
+; Programmable Invert Inputs  ; 27,993 / 932,160 ( 3 % )        ;
+; Programmable Inverts        ; 27,993 / 932,160 ( 3 % )        ;
+; R0 interconnects            ; 506,416 / 8,632,960 ( 6 % )     ;
+; R1 interconnects            ; 312,787 / 4,933,120 ( 6 % )     ;
+; R12 interconnects           ; 24,171 / 739,968 ( 3 % )        ;
+; R2 interconnects            ; 137,841 / 2,473,120 ( 6 % )     ;
+; R4 interconnects            ; 116,389 / 2,486,240 ( 5 % )     ;
+; R6 interconnects            ; 171,311 / 2,492,800 ( 7 % )     ;
+; Redundancy Muxes            ; 3,481 / 145,648 ( 2 % )         ;
+; Row Clock Tap-Offs          ; 23,118 / 739,968 ( 3 % )        ;
+; Switchbox_clock_muxes       ; 282 / 23,040 ( 1 % )            ;
+; VIO Buffers                 ; 589 / 22,400 ( 3 % )            ;
+; Vertical_seam_tap_muxes     ; 249 / 12,288 ( 2 % )            ;
++-----------------------------+---------------------------------+
+
+
++-------------------+
+; Finalize Messages ;
++-------------------+
+Warning (125092): Tcl Script file ./constraints/cxltyp2_quartus_constraints_ed_en.tcl not found.
+Warning (125092): Tcl Script file ./constraints/qsf_device_pinout.tcl not found.
+Info (20032): Parallel compilation is enabled and will use up to 16 processors
+Info: *******************************************************************
+Info: Running Quartus Prime Fitter
+    Info: Version 24.3.0 Build 212 11/18/2024 SC Pro Edition
+    Info: Processing started: Mon Nov  3 15:56:40 2025
+    Info: System process ID: 20472
+Info: Command: quartus_fit --read_settings_files=on --write_settings_files=off cxltyp2_ed -c cxltyp2_ed
+Info: qfit2_default_script.tcl version: #1
+Info: Project  = cxltyp2_ed
+Info: Revision = cxltyp2_ed
+Info (21076): High junction temperature operating condition is not set. Assuming a default value of '100'.
+Info (21076): Low junction temperature operating condition is not set. Assuming a default value of '0'.
+Warning (23167): During hold fix-up, 4 connections with hold failures larger than 3000 ps are found and ignored. Large hold requirements may arise from various design issues, such as SDC problems or clock skew challenges.
+Info (18258): Fitter Physical Synthesis operations beginning
+Info (18259): Fitter Physical Synthesis operations ending: elapsed time is 00:00:25
+Info (24616): Empty 'F-tile' indicated by pin 'MB71' has been preserved  due to PRESERVE_UNUSED_XCVR_CHANNEL instance assignment
+Info (16557): Fitter post-fit operations ending: elapsed time is 00:06:11
+
+

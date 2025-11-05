@@ -1,0 +1,264 @@
+Flow report for cxltyp2_ed
+Tue Oct 28 11:19:13 2025
+Quartus Prime Version 24.3.0 Build 212 11/18/2024 SC Pro Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Flow Summary
+  2. Flow Settings
+  3. Flow Non-Default Global Settings
+  4. Flow Elapsed Time
+  5. Flow OS Summary
+  6. Flow Log
+  7. Legal Notice
+
+
+
++------------------------------------------------------------------------------+
+; Flow Summary                                                                 ;
++---------------------------------+--------------------------------------------+
+; Flow Status                     ; Successful - Tue Oct 28 11:19:13 2025      ;
+; Quartus Prime Version           ; 24.3.0 Build 212 11/18/2024 SC Pro Edition ;
+; Revision Name                   ; cxltyp2_ed                                 ;
+; Top-level Entity Name           ; cxltyp2_ed                                 ;
+; Family                          ; Agilex 7                                   ;
+; Device                          ; AGIB027R29A1E2VR3                          ;
+; Timing Models                   ; Preliminary                                ;
+; Power Models                    ; Final                                      ;
+; Device Status                   ; Preliminary                                ;
+; Logic utilization (in ALMs)     ; 142,224 / 912,800 ( 16 % )                 ;
+; Total dedicated logic registers ; 321936                                     ;
+; Total pins                      ; 203 / 1,040 ( 20 % )                       ;
+; Total block memory bits         ; 22,544,984 / 271,810,560 ( 8 % )           ;
+; Total RAM Blocks                ; 1,936 / 13,272 ( 15 % )                    ;
+; Total DSP Blocks                ; 0 / 8,528 ( 0 % )                          ;
+; Total HSSI HPS                  ; 0 / 1 ( 0 % )                              ;
+; Total HSSI R-Tiles              ; 1 / 3 ( 33 % )                             ;
+; Total PLLs                      ; 4 / 36 ( 11 % )                            ;
++---------------------------------+--------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 10/28/2025 08:57:18 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; cxltyp2_ed          ;
++-------------------+---------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                                                                                                                ;
++--------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+-------------+------------+
+; Assignment Name                            ; Value                                                                                                                                              ; Default Value      ; Entity Name ; Section Id ;
++--------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+-------------+------------+
+; ADV_NETLIST_OPT_SYNTH_WYSIWYG_REMAP        ; On                                                                                                                                                 ; Off                ; --          ; --         ;
+; ALLOW_DSP_RETIMING                         ; On                                                                                                                                                 ; Off                ; --          ; --         ;
+; ALLOW_RAM_RETIMING                         ; On                                                                                                                                                 ; Off                ; --          ; --         ;
+; ALM_REGISTER_PACKING_EFFORT                ; Low                                                                                                                                                ; Medium             ; --          ; --         ;
+; COMPILER_SIGNATURE_ID                      ; 24062491136.176165983824028                                                                                                                        ; --                 ; --          ; --         ;
+; ENABLE_CLOCK_LATENCY                       ; On                                                                                                                                                 ; Off                ; --          ; --         ;
+; ENABLE_SIGNALTAP                           ; Off                                                                                                                                                ; --                 ; --          ; --         ;
+; FINAL_PLACEMENT_OPTIMIZATION               ; Always                                                                                                                                             ; Automatically      ; --          ; --         ;
+; FITTER_AGGRESSIVE_ROUTABILITY_OPTIMIZATION ; Always                                                                                                                                             ; Automatically      ; --          ; --         ;
+; FITTER_EFFORT                              ; -- (Not supported for targeted family)                                                                                                             ; Auto Fit           ; --          ; --         ;
+; FLOW_ENABLE_HYPER_RETIMER_FAST_FORWARD     ; On                                                                                                                                                 ; Off                ; --          ; --         ;
+; MAX_CORE_JUNCTION_TEMP                     ; 100                                                                                                                                                ; --                 ; --          ; --         ;
+; MIN_CORE_JUNCTION_TEMP                     ; 0                                                                                                                                                  ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/intel_rtile_cxl_top_cxltyp2_ed/intel_rtile_cxl_top_1140/synth/cxl_io_cmb_adapter_cfg_pkg.vh.iv           ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/intel_rtile_cxl_top_cxltyp2_ed/intel_rtile_cxl_top_1140/synth/cxl_io_rtlgen_include_cmb_adapter.vh.iv    ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/intel_rtile_cxl_top_cxltyp2_ed/intel_rtile_cxl_top_1140/synth/cxl_io_rtlgen_pkg_cmb_adapter.vh.iv        ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/intel_rtile_cxl_top_cxltyp2_ed/intel_rtile_cxl_top_1140/synth/cxl_io_cmb_global_pkg.vh.iv                ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/intel_rtile_cxl_top_cxltyp2_ed/intel_rtile_cxl_top_1140/synth/cxl_io_cmb_global_struct_ports.vh.iv       ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/intel_rtile_cxl_top_cxltyp2_ed/intel_rtile_cxl_top_1140/synth/cxl_io_cmb_pf0_pkg.vh.iv                   ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/intel_rtile_cxl_top_cxltyp2_ed/intel_rtile_cxl_top_1140/synth/cxl_io_cmb_pf0_struct_ports.vh.iv          ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/intel_rtile_cxl_top_cxltyp2_ed/intel_rtile_cxl_top_1140/synth/cxl_io_cmb_pf1_pkg.vh.iv                   ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/intel_rtile_cxl_top_cxltyp2_ed/intel_rtile_cxl_top_1140/synth/cxl_io_cmb_pf1_struct_ports.vh.iv          ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/intel_rtile_cxl_top_cxltyp2_ed/intel_rtile_cxl_top_1140/synth/cxl_io_rtlgen_include_cmb_core_regs.vh.iv  ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/intel_rtile_cxl_top_cxltyp2_ed/intel_rtile_cxl_top_1140/synth/cxl_io_rtlgen_pkg_cmb_core_regs.vh.iv      ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/intel_rtile_cxl_top_cxltyp2_ed/intel_rtile_cxl_top_1140/synth/cxl_io_cmb_adapter_cfg_struct_ports.vh.iv  ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/intel_rtile_cxl_top_cxltyp2_ed/intel_rtile_cxl_top_1140/synth/cxl_io_cmb_adapter_rdl_assigns.svh.iv      ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/intel_rtile_cxl_top_cxltyp2_ed/intel_rtile_cxl_top_1140/synth/cxl_io_pld_if.svh.iv                       ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/intel_rtile_cxl_top_cxltyp2_ed/intel_rtile_cxl_top_1140/synth/cxl_io_tlp_enum.svh.iv                     ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/intel_rtile_cxl_top_cxltyp2_ed/intel_rtile_cxl_top_1140/synth/cxl_io_straps_core.vh.iv                   ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/intel_rtile_cxl_top_cxltyp2_ed/intel_rtile_cxl_top_1140/synth/cxl_io_glb_rdl_assigns.svh.iv              ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/intel_rtile_cxl_top_cxltyp2_ed/intel_rtile_cxl_top_1140/synth/cxl_io_glb_xtra_logic.svh.iv               ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/intel_rtile_cxl_top_cxltyp2_ed/intel_rtile_cxl_top_1140/synth/cxl_io_pf0_0_xtra_logic.svh.iv             ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/intel_rtile_cxl_top_cxltyp2_ed/intel_rtile_cxl_top_1140/synth/cxl_io_pf0_1_xtra_logic.svh.iv             ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/intel_rtile_cxl_top_cxltyp2_ed/intel_rtile_cxl_top_1140/synth/cxl_io_pf0_2_xtra_logic.svh.iv             ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/intel_rtile_cxl_top_cxltyp2_ed/intel_rtile_cxl_top_1140/synth/cxl_io_pf0_rdl_assigns.svh.iv              ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/intel_rtile_cxl_top_cxltyp2_ed/intel_rtile_cxl_top_1140/synth/cxl_io_pf1_rdl_assigns.svh.iv              ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/intel_rtile_cxl_top_cxltyp2_ed/intel_rtile_cxl_top_1140/synth/cafu_csr0_reg_macros.vh.iv                 ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/intel_rtile_cxl_top_cxltyp2_ed/intel_rtile_cxl_top_1140/synth/rnr_cxl_soft_ip_intf.svh.iv                ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/intel_rtile_cxl_top_cxltyp2_ed/intel_rtile_cxl_top_1140/synth/rnr_ial_sip_intf.svh.iv                    ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/intel_rtile_cxl_top_cxltyp2_ed/intel_rtile_cxl_top_1140/synth/rtlgen_include_latest.vh.iv                ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/intel_rtile_cxl_top_cxltyp2_ed/intel_rtile_cxl_top_1140/synth/cxl_io_cmb_customsb_cfg_pkg.vh.iv          ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/intel_rtile_cxl_top_cxltyp2_ed/intel_rtile_cxl_top_1140/synth/cxl_io_cmb_customsb_cfg_struct_ports.vh.iv ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/intel_rtile_cxl_top_cxltyp2_ed/intel_rtile_cxl_top_1140/synth/cxl_io_cmb_customsb_rdl_assigns.svh.iv     ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/intel_rtile_cxl_top_cxltyp2_ed/intel_rtile_cxl_top_1140/synth/cxl_io_custom_sb_global_struct.svh.iv      ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/intel_rtile_cxl_top_cxltyp2_ed/intel_rtile_cxl_top_1140/synth/cxl_io_pm_data_struct.vh.iv                ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/intel_rtile_cxl_top_cxltyp2_ed/intel_rtile_cxl_top_1140/synth/cxl_io_rtlgen_include_cmb_customsb.vh.iv   ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/intel_rtile_cxl_top_cxltyp2_ed/intel_rtile_cxl_top_1140/synth/cxl_io_rtlgen_pkg_cmb_customsb.vh.iv       ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/intel_rtile_cxl_top_cxltyp2_ed/intel_rtile_cxl_top_1140/synth/rtlgen_include_v12.vh.iv                   ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/intel_rtile_cxl_top_cxltyp2_ed/intel_rtile_cxl_top_1140/synth/ial_tc_bbs_reg_macros.vh.iv                ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/intel_rtile_cxl_top_cxltyp2_ed/intel_rtile_cxl_top_1140/synth/cxl_io_gtunit_struct.svh.iv                ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/intel_rtile_cxl_top_cxltyp2_ed/intel_rtile_cxl_top_cxltyp2_ed.cmp                                        ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/intel_rtile_cxl_top_cxltyp2_ed.ip                                                                        ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/hardware_test_design/common/cdc_fifos/cfg_to_iosf_fifo_vcd_ED/cfg_to_iosf_fifo_vcd_ED.cmp                ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/hardware_test_design/common/cdc_fifos/cfg_to_iosf_fifo_vcd_ED.ip                                         ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/hardware_test_design/common/cdc_fifos/fifo_8b_256w_show_ahead/fifo_8b_256w_show_ahead.cmp                ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/hardware_test_design/common/cdc_fifos/fifo_8b_256w_show_ahead.ip                                         ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/hardware_test_design/common/cdc_fifos/iosf_to_cfg_fifo_vcd_ED/iosf_to_cfg_fifo_vcd_ED.cmp                ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/hardware_test_design/common/cdc_fifos/iosf_to_cfg_fifo_vcd_ED.ip                                         ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/hardware_test_design/common/mc_top/altecc_enc_dec_ip/altecc_dec_latency1/altecc_dec_latency1.cmp         ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/hardware_test_design/common/mc_top/altecc_enc_dec_ip/altecc_dec_latency1.ip                              ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/hardware_test_design/common/mc_top/altecc_enc_dec_ip/altecc_dec_latency2/altecc_dec_latency2.cmp         ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/hardware_test_design/common/mc_top/altecc_enc_dec_ip/altecc_dec_latency2.ip                              ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/hardware_test_design/common/mc_top/altecc_enc_dec_ip/altecc_enc_latency0/altecc_enc_latency0.cmp         ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/hardware_test_design/common/mc_top/altecc_enc_dec_ip/altecc_enc_latency0.ip                              ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/hardware_test_design/common/mc_top/emif2_ip/emif2/emif2.cmp                                              ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/hardware_test_design/common/mc_top/emif2_ip/emif2.ip                                                     ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/hardware_test_design/common/mc_top/emif_ip/emif/emif.cmp                                                 ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/hardware_test_design/common/mc_top/emif_ip/emif.ip                                                       ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/hardware_test_design/common/mc_top/emif_ip/emif_cal_one_ch/emif_cal_one_ch.cmp                           ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/hardware_test_design/common/mc_top/emif_ip/emif_cal_one_ch.ip                                            ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/hardware_test_design/common/mc_top/sip_quartus_ips/reqfifo_IP/reqfifo/reqfifo.cmp                        ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/hardware_test_design/common/mc_top/sip_quartus_ips/reqfifo_IP/reqfifo.ip                                 ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/hardware_test_design/common/mc_top/sip_quartus_ips/rspfifo_IP/rspfifo/rspfifo.cmp                        ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/hardware_test_design/common/mc_top/sip_quartus_ips/rspfifo_IP/rspfifo.ip                                 ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/hardware_test_design/IP/bram/w32_d1024/w32_d1024.cmp                                                     ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/hardware_test_design/IP/bram/w32_d1024.ip                                                                ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/hardware_test_design/IP/bram/w64_d8192/w64_d8192.cmp                                                     ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/hardware_test_design/IP/bram/w64_d8192.ip                                                                ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/hardware_test_design/common/BRAM/port_1_ram/port_1_ram.cmp                                               ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/hardware_test_design/common/BRAM/port_1_ram.ip                                                           ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/hardware_test_design/common/buf_512w_131072d/buf_512w_131072d.cmp                                        ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/hardware_test_design/common/buf_512w_131072d.ip                                                          ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/hardware_test_design/common/buf_512w_16384d/buf_512w_16384d.cmp                                          ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/hardware_test_design/common/buf_512w_16384d.ip                                                           ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/hardware_test_design/common/buf_512w_65536d/buf_512w_65536d.cmp                                          ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/hardware_test_design/common/buf_512w_65536d.ip                                                           ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/hardware_test_design/common/fifo_pac_overflow/fifo_pac_overflow.cmp                                      ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/hardware_test_design/common/fifo_pac_overflow.ip                                                         ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/hardware_test_design/common/intel_reset_release/intel_reset_release/intel_reset_release.cmp              ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/hardware_test_design/common/intel_reset_release/intel_reset_release.ip                                   ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/hardware_test_design/common/signalTap_updateLogic/signalTap_updateLogic.cmp                              ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/hardware_test_design/common/signalTap_updateLogic.ip                                                     ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/hardware_test_design/dni/sandboxes/jianjianw_24028_0/sld/ipgen/alt_sld_fab_0/alt_sld_fab_0.cmp           ; --                 ; --          ; --         ;
+; MISC_FILE                                  ; C:/Users/11755/Downloads/PAC_claude/Intel/hardware_test_design/dni/sandboxes/jianjianw_24028_0/sld/ipgen/alt_sld_fab_0.ip                          ; --                 ; --          ; --         ;
+; MUX_RESTRUCTURE                            ; Off                                                                                                                                                ; Auto               ; --          ; --         ;
+; NUM_PARALLEL_PROCESSORS                    ; 16                                                                                                                                                 ; --                 ; --          ; --         ;
+; OPTIMIZATION_MODE                          ; High Performance Effort                                                                                                                            ; Balanced           ; --          ; --         ;
+; OPTIMIZATION_TECHNIQUE                     ; Speed                                                                                                                                              ; Balanced           ; --          ; --         ;
+; OPTIMIZE_POWER_DURING_FITTING              ; Off                                                                                                                                                ; Normal compilation ; --          ; --         ;
+; OPTIMIZE_POWER_DURING_SYNTHESIS            ; Off                                                                                                                                                ; Normal compilation ; --          ; --         ;
+; PHYSICAL_SYNTHESIS_HIGH_EFFORT             ; On                                                                                                                                                 ; Off                ; --          ; --         ;
+; POST_ROUTE_PHYSICAL_SYNTHESIS              ; On                                                                                                                                                 ; Off                ; --          ; --         ;
+; PRESERVE_FOR_DEBUG_ENABLE                  ; On                                                                                                                                                 ; Off                ; --          ; --         ;
+; PROJECT_OUTPUT_DIRECTORY                   ; C:/Users/11755/Downloads/PAC_claude/Intel/hardware_test_design/output_files                                                                        ; --                 ; --          ; --         ;
+; QII_AUTO_PACKED_REGISTERS                  ; Normal                                                                                                                                             ; Auto               ; --          ; --         ;
+; REMOVE_DUPLICATE_REGISTERS                 ; Off                                                                                                                                                ; On                 ; --          ; --         ;
+; ROUTER_TIMING_OPTIMIZATION_LEVEL           ; MAXIMUM                                                                                                                                            ; Normal             ; --          ; --         ;
+; RTM_HIGH_PERFORMANCE_EFFORT                ; On                                                                                                                                                 ; Off                ; --          ; --         ;
+; SEARCH_PATH                                ; ./common/                                                                                                                                          ; --                 ; --          ; --         ;
+; SEARCH_PATH                                ; ./common/avst4to1_rx/                                                                                                                              ; --                 ; --          ; --         ;
+; SEARCH_PATH                                ; ./common/axi_to_avst/                                                                                                                              ; --                 ; --          ; --         ;
+; SEARCH_PATH                                ; ./common/cafu_csr0/                                                                                                                                ; --                 ; --          ; --         ;
+; SEARCH_PATH                                ; ./../intel_rtile_cxl_top_cxltyp2_ed                                                                                                                ; --                 ; --          ; --         ;
+; SEARCH_PATH                                ; ./../intel_rtile_cxl_top_cxltyp2_ed/intel_rtile_cxl_top_1140/synth                                                                                 ; --                 ; --          ; --         ;
+; SOPCINFO_FILE                              ; C:/Users/11755/Downloads/PAC_claude/Intel/intel_rtile_cxl_top_cxltyp2_ed/intel_rtile_cxl_top_cxltyp2_ed.sopcinfo                                   ; --                 ; --          ; --         ;
+; SOPCINFO_FILE                              ; C:/Users/11755/Downloads/PAC_claude/Intel/hardware_test_design/common/cdc_fifos/cfg_to_iosf_fifo_vcd_ED/cfg_to_iosf_fifo_vcd_ED.sopcinfo           ; --                 ; --          ; --         ;
+; SOPCINFO_FILE                              ; C:/Users/11755/Downloads/PAC_claude/Intel/hardware_test_design/common/cdc_fifos/fifo_8b_256w_show_ahead/fifo_8b_256w_show_ahead.sopcinfo           ; --                 ; --          ; --         ;
+; SOPCINFO_FILE                              ; C:/Users/11755/Downloads/PAC_claude/Intel/hardware_test_design/common/cdc_fifos/iosf_to_cfg_fifo_vcd_ED/iosf_to_cfg_fifo_vcd_ED.sopcinfo           ; --                 ; --          ; --         ;
+; SOPCINFO_FILE                              ; C:/Users/11755/Downloads/PAC_claude/Intel/hardware_test_design/common/mc_top/altecc_enc_dec_ip/altecc_dec_latency1/altecc_dec_latency1.sopcinfo    ; --                 ; --          ; --         ;
+; SOPCINFO_FILE                              ; C:/Users/11755/Downloads/PAC_claude/Intel/hardware_test_design/common/mc_top/altecc_enc_dec_ip/altecc_dec_latency2/altecc_dec_latency2.sopcinfo    ; --                 ; --          ; --         ;
+; SOPCINFO_FILE                              ; C:/Users/11755/Downloads/PAC_claude/Intel/hardware_test_design/common/mc_top/altecc_enc_dec_ip/altecc_enc_latency0/altecc_enc_latency0.sopcinfo    ; --                 ; --          ; --         ;
+; SOPCINFO_FILE                              ; C:/Users/11755/Downloads/PAC_claude/Intel/hardware_test_design/common/mc_top/emif2_ip/emif2/emif2.sopcinfo                                         ; --                 ; --          ; --         ;
+; SOPCINFO_FILE                              ; C:/Users/11755/Downloads/PAC_claude/Intel/hardware_test_design/common/mc_top/emif_ip/emif/emif.sopcinfo                                            ; --                 ; --          ; --         ;
+; SOPCINFO_FILE                              ; C:/Users/11755/Downloads/PAC_claude/Intel/hardware_test_design/common/mc_top/emif_ip/emif_cal_one_ch/emif_cal_one_ch.sopcinfo                      ; --                 ; --          ; --         ;
+; SOPCINFO_FILE                              ; C:/Users/11755/Downloads/PAC_claude/Intel/hardware_test_design/common/mc_top/sip_quartus_ips/reqfifo_IP/reqfifo/reqfifo.sopcinfo                   ; --                 ; --          ; --         ;
+; SOPCINFO_FILE                              ; C:/Users/11755/Downloads/PAC_claude/Intel/hardware_test_design/common/mc_top/sip_quartus_ips/rspfifo_IP/rspfifo/rspfifo.sopcinfo                   ; --                 ; --          ; --         ;
+; SOPCINFO_FILE                              ; C:/Users/11755/Downloads/PAC_claude/Intel/hardware_test_design/IP/bram/w32_d1024/w32_d1024.sopcinfo                                                ; --                 ; --          ; --         ;
+; SOPCINFO_FILE                              ; C:/Users/11755/Downloads/PAC_claude/Intel/hardware_test_design/IP/bram/w64_d8192/w64_d8192.sopcinfo                                                ; --                 ; --          ; --         ;
+; SOPCINFO_FILE                              ; C:/Users/11755/Downloads/PAC_claude/Intel/hardware_test_design/common/BRAM/port_1_ram/port_1_ram.sopcinfo                                          ; --                 ; --          ; --         ;
+; SOPCINFO_FILE                              ; C:/Users/11755/Downloads/PAC_claude/Intel/hardware_test_design/common/buf_512w_131072d/buf_512w_131072d.sopcinfo                                   ; --                 ; --          ; --         ;
+; SOPCINFO_FILE                              ; C:/Users/11755/Downloads/PAC_claude/Intel/hardware_test_design/common/buf_512w_16384d/buf_512w_16384d.sopcinfo                                     ; --                 ; --          ; --         ;
+; SOPCINFO_FILE                              ; C:/Users/11755/Downloads/PAC_claude/Intel/hardware_test_design/common/buf_512w_65536d/buf_512w_65536d.sopcinfo                                     ; --                 ; --          ; --         ;
+; SOPCINFO_FILE                              ; C:/Users/11755/Downloads/PAC_claude/Intel/hardware_test_design/common/fifo_pac_overflow/fifo_pac_overflow.sopcinfo                                 ; --                 ; --          ; --         ;
+; SOPCINFO_FILE                              ; C:/Users/11755/Downloads/PAC_claude/Intel/hardware_test_design/common/intel_reset_release/intel_reset_release/intel_reset_release.sopcinfo         ; --                 ; --          ; --         ;
+; SOPCINFO_FILE                              ; C:/Users/11755/Downloads/PAC_claude/Intel/hardware_test_design/common/signalTap_updateLogic/signalTap_updateLogic.sopcinfo                         ; --                 ; --          ; --         ;
+; SOPCINFO_FILE                              ; C:/Users/11755/Downloads/PAC_claude/Intel/hardware_test_design/dni/sandboxes/jianjianw_24028_0/sld/ipgen/alt_sld_fab_0/alt_sld_fab_0.sopcinfo      ; --                 ; --          ; --         ;
+; STATE_MACHINE_PROCESSING                   ; One-Hot                                                                                                                                            ; Auto               ; --          ; --         ;
+; SYNCHRONIZATION_REGISTER_CHAIN_LENGTH      ; 2                                                                                                                                                  ; 3                  ; --          ; --         ;
+; SYNTH_GATED_CLOCK_CONVERSION               ; On                                                                                                                                                 ; Off                ; --          ; --         ;
+; SYNTH_TIMING_DRIVEN_SYNTHESIS              ; -- (Not supported for targeted family)                                                                                                             ; --                 ; --          ; --         ;
+; TAO_FILE                                   ; myresults.tao                                                                                                                                      ; --                 ; --          ; --         ;
+; TIMING_ANALYZER_DO_REPORT_TIMING           ; On                                                                                                                                                 ; Off                ; --          ; --         ;
+; USE_SIGNALTAP_FILE                         ; stp_default.stp                                                                                                                                    ; --                 ; --          ; --         ;
+; VERILOG_INPUT_VERSION                      ; SystemVerilog_2009                                                                                                                                 ; Verilog_2001       ; --          ; --         ;
+; VERILOG_MACRO                              ; REVB_DEVKIT                                                                                                                                        ; --                 ; --          ; --         ;
++--------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+-------------+------------+
+
+
++------------------------------------------------------------+
+; Flow Elapsed Time                                          ;
++-----------------------+--------------+---------------------+
+; Module Name           ; Elapsed Time ; Peak Virtual Memory ;
++-----------------------+--------------+---------------------+
+; Synthesis             ; 00:17:22     ; 5874 MB             ;
+; Fitter                ; 01:49:53     ; 21810 MB            ;
+; Fitter (Fast Forward) ; 00:08:29     ; 11929 MB            ;
+; Timing Analyzer       ; 00:02:30     ; 9811 MB             ;
+; Assembler             ; 00:03:02     ; 10685 MB            ;
+; Total                 ; 02:21:16     ; --                  ;
++-----------------------+--------------+---------------------+
+
+
++-------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                     ;
++-----------------------+------------------+------------+------------+----------------+
+; Module Name           ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++-----------------------+------------------+------------+------------+----------------+
+; Synthesis             ; jianjianw        ; Windows 11 ; 10.0.26100 ; x86_64         ;
+; Fitter                ; jianjianw        ; Windows 11 ; 10.0.26100 ; x86_64         ;
+; Fitter (Fast Forward) ; jianjianw        ; Windows 11 ; 10.0.26100 ; x86_64         ;
+; Timing Analyzer       ; jianjianw        ; Windows 11 ; 10.0.26100 ; x86_64         ;
+; Assembler             ; jianjianw        ; Windows 11 ; 10.0.26100 ; x86_64         ;
++-----------------------+------------------+------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_syn --read_settings_files=on --write_settings_files=off cxltyp2_ed -c cxltyp2_ed
+quartus_fit --read_settings_files=on --write_settings_files=off cxltyp2_ed -c cxltyp2_ed
+quartus_fit --read_settings_files=on --write_settings_files=off cxltyp2_ed -c cxltyp2_ed --fastforward --continue_flow
+quartus_sta cxltyp2_ed -c cxltyp2_ed --mode=finalize
+quartus_asm --read_settings_files=on --write_settings_files=off cxltyp2_ed -c cxltyp2_ed
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2024  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the Intel FPGA Software License Subscription Agreements 
+on the Quartus Prime software download page.
+
+
+

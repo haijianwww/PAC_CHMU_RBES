@@ -1,0 +1,48 @@
+set_global_assignment -entity "signalTap_updateLogic" -library "signalTap_updateLogic" -name IP_TOOL_NAME "QsysPrimePro"
+set_global_assignment -entity "signalTap_updateLogic" -library "signalTap_updateLogic" -name IP_TOOL_VERSION "24.3"
+set_global_assignment -entity "signalTap_updateLogic" -library "signalTap_updateLogic" -name IP_TOOL_ENV "QsysPrimePro"
+set_global_assignment -entity "signalTap_updateLogic" -library "signalTap_updateLogic" -name IP_TOOL_VENDOR_NAME "Intel Corporation"
+set_global_assignment -entity "signalTap_updateLogic" -library "signalTap_updateLogic" -name IP_TOP_LEVEL_COMPONENT_NAME "altera_signaltap_ii_logic_analyzer"
+set_global_assignment -entity "signalTap_updateLogic" -library "signalTap_updateLogic" -name PRE_COMPILED_MODULE "ON"
+set_global_assignment -entity "signalTap_updateLogic" -library "signalTap_updateLogic" -name OCS_IP_FILE [file join $::quartus(qip_path) "../signalTap_updateLogic.ip"]
+set_global_assignment -entity "signalTap_updateLogic" -library "signalTap_updateLogic" -name OCS_IP_TYPE "altera_signaltap_ii_logic_analyzer"
+set_global_assignment -entity "signalTap_updateLogic" -library "signalTap_updateLogic" -name OCS_IP_VERSION "19.2.0"
+set_global_assignment -entity "signalTap_updateLogic" -library "signalTap_updateLogic" -name OCS_IP_HASH "wqpbgoi"
+set_global_assignment -library "signalTap_updateLogic" -name SOPCINFO_FILE [file join $::quartus(qip_path) "signalTap_updateLogic.sopcinfo"]
+set_global_assignment -entity "signalTap_updateLogic" -library "signalTap_updateLogic" -name SLD_INFO "QSYS_NAME signalTap_updateLogic HAS_SOPCINFO 1 GENERATION_ID 0"
+set_global_assignment -library "signalTap_updateLogic" -name MISC_FILE [file join $::quartus(qip_path) "signalTap_updateLogic.cmp"]
+set_global_assignment -entity "signalTap_updateLogic" -library "signalTap_updateLogic" -name IP_TARGETED_DEVICE_FAMILY "Agilex 7"
+set_global_assignment -entity "signalTap_updateLogic" -library "signalTap_updateLogic" -name IP_GENERATED_DEVICE_FAMILY "{Agilex 7}"
+set_global_assignment -entity "signalTap_updateLogic" -library "signalTap_updateLogic" -name IP_QSYS_MODE "STANDALONE"
+set_global_assignment -name SYNTHESIS_ONLY_QIP ON
+set_global_assignment -library "signalTap_updateLogic" -name MISC_FILE [file join $::quartus(qip_path) "../signalTap_updateLogic.ip"]
+
+set_global_assignment -entity "sld_signaltap_syn" -library "altera_signaltap_ii_logic_analyzer_1920" -name IP_COMPONENT_NAME "c2xkX3NpZ25hbHRhcF9zeW4="
+set_global_assignment -entity "sld_signaltap_syn" -library "altera_signaltap_ii_logic_analyzer_1920" -name IP_COMPONENT_DISPLAY_NAME "U2lnbmFsIFRhcCBMb2dpYyBBbmFseXplciBJbnRlbCBGUEdBIElQ"
+set_global_assignment -entity "sld_signaltap_syn" -library "altera_signaltap_ii_logic_analyzer_1920" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "sld_signaltap_syn" -library "altera_signaltap_ii_logic_analyzer_1920" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "sld_signaltap_syn" -library "altera_signaltap_ii_logic_analyzer_1920" -name IP_COMPONENT_AUTHOR "SW50ZWwgQ29ycG9yYXRpb24="
+set_global_assignment -entity "sld_signaltap_syn" -library "altera_signaltap_ii_logic_analyzer_1920" -name IP_COMPONENT_VERSION "MTkuMi4w"
+set_global_assignment -entity "sld_signaltap_syn" -library "altera_signaltap_ii_logic_analyzer_1920" -name IP_COMPONENT_DESCRIPTION "U2lnbmFsIFRhcCBMb2dpYyBBbmFseXplcg=="
+set_global_assignment -entity "sld_signaltap_syn" -library "altera_signaltap_ii_logic_analyzer_1920" -name IP_COMPONENT_GROUP "QmFzaWMgRnVuY3Rpb25zL1NpbXVsYXRpb247IERlYnVnIGFuZCBWZXJpZmljYXRpb24vRGVidWcgYW5kIFBlcmZvcm1hbmNl"
+set_global_assignment -entity "sld_signaltap_syn" -library "altera_signaltap_ii_logic_analyzer_1920" -name IP_COMPONENT_DOCUMENTATION_LINK "aHR0cDovL3d3dy5hbHRlcmEuY29tL2xpdGVyYXR1cmUvaGIvcXRzL3F0c19xaWk1MzAwOS5wZGY="
+set_global_assignment -entity "sld_signaltap_syn" -library "altera_signaltap_ii_logic_analyzer_1920" -name IP_COMPONENT_DOCUMENTATION_LINK "aHR0cDovL3F1YXJ0dXNoZWxwLmFsdGVyYS5jb20vMTQuMC9tZXJnZWRQcm9qZWN0cy9oZGwvbWVnYS9tZWdhX2ZpbGVfc2xkX3NpZ25hbHRhcC5odG0/R1NBX3Bvcz00MyZXVC5vc3Nfcj0xJldULm9zcz1zaWduYWx0YXA="
+set_global_assignment -entity "sld_signaltap_syn" -library "altera_signaltap_ii_logic_analyzer_1920" -name IP_COMPONENT_DOCUMENTATION_LINK "aHR0cHM6Ly9kb2N1bWVudGF0aW9uLmFsdGVyYS5jb20vIy9saW5rL213aDE0MTAzODUxMTczMjUvbXdoMTQxMDM4NDQ2OTUyNA=="
+set_global_assignment -entity "sld_signaltap_syn" -library "altera_signaltap_ii_logic_analyzer_1920" -name IP_COMPONENT_DOCUMENTATION_LINK "aHR0cHM6Ly9kb2N1bWVudGF0aW9uLmFsdGVyYS5jb20vIy9saW5rL2hjbzE0MjE2OTgwNDIwODcvaGNvMTQyMTY5ODAxMzQwOA=="
+set_global_assignment -entity "signalTap_updateLogic" -library "signalTap_updateLogic" -name IP_COMPONENT_NAME "c2lnbmFsVGFwX3VwZGF0ZUxvZ2lj"
+set_global_assignment -entity "signalTap_updateLogic" -library "signalTap_updateLogic" -name IP_COMPONENT_DISPLAY_NAME "c3lzdGVt"
+set_global_assignment -entity "signalTap_updateLogic" -library "signalTap_updateLogic" -name IP_COMPONENT_REPORT_HIERARCHY "On"
+set_global_assignment -entity "signalTap_updateLogic" -library "signalTap_updateLogic" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "signalTap_updateLogic" -library "signalTap_updateLogic" -name IP_COMPONENT_AUTHOR "SW50ZWwgQ29ycG9yYXRpb24="
+set_global_assignment -entity "signalTap_updateLogic" -library "signalTap_updateLogic" -name IP_COMPONENT_VERSION "MS4w"
+
+
+set_global_assignment -library "altera_signaltap_ii_logic_analyzer_1920" -name VHDL_FILE [file join $::quartus(qip_path) "altera_signaltap_ii_logic_analyzer_1920/synth/sld_signaltap_syn.vhd"]
+set_instance_assignment -entity "sld_signaltap_syn" -library "altera_signaltap_ii_logic_analyzer_1920" -name SDC_ENTITY_FILE [file join $::quartus(qip_path) "altera_signaltap_ii_logic_analyzer_1920/synth/intel_signal_tap.sdc"] -no_sdc_promotion 
+set_global_assignment -library "signalTap_updateLogic" -name VERILOG_FILE [file join $::quartus(qip_path) "synth/signalTap_updateLogic.v"]
+
+
+set_global_assignment -entity "sld_signaltap_syn" -library "altera_signaltap_ii_logic_analyzer_1920" -name IP_TOOL_NAME "altera_signaltap_ii_logic_analyzer"
+set_global_assignment -entity "sld_signaltap_syn" -library "altera_signaltap_ii_logic_analyzer_1920" -name IP_TOOL_VERSION "19.2.0"
+set_global_assignment -entity "sld_signaltap_syn" -library "altera_signaltap_ii_logic_analyzer_1920" -name IP_TOOL_ENV "QsysPrimePro"
+

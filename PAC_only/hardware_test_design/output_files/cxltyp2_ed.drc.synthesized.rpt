@@ -1,0 +1,218 @@
+Design Assistant report for cxltyp2_ed
+Tue Oct 28 09:14:25 2025
+Quartus Prime Version 24.3.0 Build 212 11/18/2024 SC Pro Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Design Assistant (Synthesized) Results - 2 of 14 Rules Failed
+  3. LNT-30023 - Reset Nets with Polarity Conflict
+  4. LNT-30010 - Nets Driving both Reset and Clock Enable Signals
+  5. LNT-30011 - Design Contains Combinational Loops
+  6. RES-10202 - Register Power-Up Settings Conflict with Device Settings
+  7. LNT-30017 - Register Output Driving Its Own Asynchronous Control Signal Directly or Through Combinational Logic
+  8. RES-30132 - Registers May Not Be Properly Reset
+  9. RES-30133 - Embedded Memory Blocks with Initialized Content That Might be Modified Before the FPGA Enters User Mode
+ 10. RES-30134 - Registers Not Reachable from Reset Release IP
+ 11. TMC-20052 - Paths with Post Synthesis Inferred Latches
+ 12. FLP-10500 - Non Driving Top Level Inputs Found
+ 13. LNT-50006 - DSP Control Signal Registers Reset Mode Mismatch
+ 14. TMC-20053 - DSP Inputs Driven by High Fan-Out Net
+ 15. TMC-20500 - Hierarchical Tree Duplication was Shallower than Possible
+ 16. TMC-20501 - Hierarchical Tree Duplication was Shallower than Requested
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2024  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the Intel FPGA Software License Subscription Agreements 
+on the Quartus Prime software download page.
+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Design Assistant (Synthesized) Results - 2 of 14 Rules Failed                                                                                                                          ;
++---------------------------------------------------------------------------------------------------------------------+----------+------------+--------+---------------------------------+
+; Rule                                                                                                                ; Severity ; Violations ; Waived ; Tags                            ;
++---------------------------------------------------------------------------------------------------------------------+----------+------------+--------+---------------------------------+
+; LNT-30023 - Reset Nets with Polarity Conflict                                                                       ; Medium   ; 1          ; 0      ; reset-usage                     ;
+; LNT-30010 - Nets Driving both Reset and Clock Enable Signals                                                        ; Low      ; 7          ; 0      ; reset-usage                     ;
+; LNT-30011 - Design Contains Combinational Loops                                                                     ; High     ; 0          ; 0      ; nonstandard-timing              ;
+; RES-10202 - Register Power-Up Settings Conflict with Device Settings                                                ; High     ; 0          ; 0      ; reset-usage                     ;
+; LNT-30017 - Register Output Driving Its Own Asynchronous Control Signal Directly or Through Combinational Logic     ; Medium   ; 0          ; 0      ; nonstandard-timing              ;
+; RES-30132 - Registers May Not Be Properly Reset                                                                     ; Medium   ; 0          ; 0      ; reset-usage, reset-reachability ;
+; RES-30133 - Embedded Memory Blocks with Initialized Content That Might be Modified Before the FPGA Enters User Mode ; Medium   ; 0          ; 0      ; ram, reset-usage                ;
+; RES-30134 - Registers Not Reachable from Reset Release IP                                                           ; Medium   ; 0          ; 0      ; reset-usage, reset-reachability ;
+; TMC-20052 - Paths with Post Synthesis Inferred Latches                                                              ; Medium   ; 0          ; 0      ; nonstandard-timing, latch       ;
+; FLP-10500 - Non Driving Top Level Inputs Found                                                                      ; Low      ; 0          ; 0      ; system                          ;
+; LNT-50006 - DSP Control Signal Registers Reset Mode Mismatch                                                        ; Low      ; 0          ; 0      ; dsp, reset-usage                ;
+; TMC-20053 - DSP Inputs Driven by High Fan-Out Net                                                                   ; Low      ; 0          ; 0      ; dsp                             ;
+; TMC-20500 - Hierarchical Tree Duplication was Shallower than Possible                                               ; Low      ; 0          ; 0      ; register-duplication, synthesis ;
+; TMC-20501 - Hierarchical Tree Duplication was Shallower than Requested                                              ; Low      ; 0          ; 0      ; register-duplication, synthesis ;
++---------------------------------------------------------------------------------------------------------------------+----------+------------+--------+---------------------------------+
+
+
+Status:		FAIL
+Severity:		Medium
+Number of violations: 	1
+Rule Parameters:      	max_violations = 5000
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; LNT-30023 - Reset Nets with Polarity Conflict                                                                                                                                                                                                                                                                                                                                       ;
++------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+--------------------------------+---------------------------------------------------------------------------------------------------+----------------------------+--------+
+; Driver                                                                                               ; Non-Inverted Signal                                                                               ; Number of Non-Inverted Signals ; Inverted Signal                                                                                   ; Number of Inverted Signals ; Waived ;
++------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+--------------------------------+---------------------------------------------------------------------------------------------------+----------------------------+--------+
+; ed_top_wrapper_typ2_inst|intel_cxl_pio_ed_top_inst|PIO_AVST.pio|bam_rw|avmm_address_reg2[6]~SynDup_2 ; ed_top_wrapper_typ2_inst|intel_cxl_pio_ed_top_inst|PIO_AVST.pio|bam_rw|data_mux_dw7_reg1[31]|SCLR ; 12                             ; ed_top_wrapper_typ2_inst|intel_cxl_pio_ed_top_inst|PIO_AVST.pio|bam_rw|data_mux_dw28_reg1[0]|SCLR ; 88                         ;        ;
++------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------+--------------------------------+---------------------------------------------------------------------------------------------------+----------------------------+--------+
+
+
+Status:		FAIL
+Severity:		Low
+Number of violations: 	7
+Rule Parameters:      	max_violations = 5000
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; LNT-30010 - Nets Driving both Reset and Clock Enable Signals                                                                                                                                                                                                                                                                                                                                                                                                           ;
++------------------------------------------------------+---------------------------+-----------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+--------------------------------------+-------------------------------------+--------------------------------+--------+
+; Driver                                               ; Asynchronous Reset Signal ; Synchronous Reset Signal                                                                                                    ; Clock Enable Signal                                                                                                            ; Number of Asynchronous Reset Signals ; Number of Synchronous Reset Signals ; Number of Clock Enable Signals ; Waived ;
++------------------------------------------------------+---------------------------+-----------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+--------------------------------------+-------------------------------------+--------------------------------+--------+
+; ed_top_wrapper_typ2_inst|ip2hdm_reset_n_f~SynDup_51  ; --                        ; ed_top_wrapper_typ2_inst|inst_axi_to_avst_bridge|axi_arready|SCLR                                                           ; ed_top_wrapper_typ2_inst|inst_axi_to_avst_bridge|write_tlp_data_strobe_f[63]|ENA                                               ; 0                                    ; 98                                  ; 2                              ;        ;
+; ed_top_wrapper_typ2_inst|ip2hdm_reset_n_f~SynDup_44  ; --                        ; ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|memWrite_counter_buf[0]|SCLR                                      ; ed_top_wrapper_typ2_inst|inst_cxl_tx_crdt_intf|bam_tx_signal_ready_o|ENA                                                       ; 0                                    ; 69                                  ; 31                             ;        ;
+; ed_top_wrapper_typ2_inst|ip2hdm_reset_n_f~SynDup_112 ; --                        ; ed_top_wrapper_typ2_inst|inst_axi_to_avst_bridge|axi_b.bvalid|SCLR                                                          ; ed_top_wrapper_typ2_inst|rx_side_inst|rx_hdr_data_fifos_inst|rx_core_fifos_logic.rx_core_fifos|tlp_crd_type_s0_f[0]|ENA        ; 0                                    ; 12                                  ; 86                             ;        ;
+; ed_top_wrapper_typ2_inst|ip2hdm_reset_n_f~SynDup_113 ; --                        ; ed_top_wrapper_typ2_inst|rx_side_inst|rx_hdr_data_fifos_inst|rx_core_fifos_logic.rx_core_fifos|cpl_sop_in_data_cycle|SCLR   ; ed_top_wrapper_typ2_inst|rx_side_inst|rx_hdr_data_fifos_inst|rx_core_fifos_logic.rx_core_fifos|tlp_crd_type_s1_f_decode[0]|ENA ; 0                                    ; 97                                  ; 3                              ;        ;
+; ed_top_wrapper_typ2_inst|ip2hdm_reset_n_f~SynDup_25  ; --                        ; ed_top_wrapper_typ2_inst|rx_side_inst|rx_hdr_data_fifos_inst|tlp_crd_type_s1_f[1]|SCLR                                      ; ed_top_wrapper_typ2_inst|rx_side_inst|rx_hdr_data_fifos_inst|rx_core_fifos_logic.rx_core_fifos|fifo_data_din_s2_f[0][175]|ENA  ; 0                                    ; 8                                   ; 92                             ;        ;
+; ed_top_wrapper_typ2_inst|ip2hdm_reset_n_f~SynDup_35  ; --                        ; ed_top_wrapper_typ2_inst|inst_axi_to_avst_bridge|tx_st_data[481]|SCLR                                                       ; ed_top_wrapper_typ2_inst|rx_side_inst|rx_hdr_data_fifos_inst|rx_core_fifos_logic.rx_core_fifos|fifo_data_din_s3_f[0][196]|ENA  ; 0                                    ; 31                                  ; 69                             ;        ;
+; ed_top_wrapper_typ2_inst|ip2hdm_reset_n_f~SynDup_27  ; --                        ; ed_top_wrapper_typ2_inst|rx_side_inst|rx_hdr_data_fifos_inst|rx_core_fifos_logic.rx_core_fifos|fifo_data_wr_en_s0_f[1]|SCLR ; ed_top_wrapper_typ2_inst|rx_side_inst|rx_hdr_data_fifos_inst|rx_core_fifos_logic.rx_core_fifos|fifo_data_din_s3_f[2][0]|ENA    ; 0                                    ; 80                                  ; 20                             ;        ;
++------------------------------------------------------+---------------------------+-----------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+--------------------------------------+-------------------------------------+--------------------------------+--------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++-------------------------------------------------+
+; LNT-30011 - Design Contains Combinational Loops ;
++-------------------------------------------------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++----------------------------------------------------------------------+
+; RES-10202 - Register Power-Up Settings Conflict with Device Settings ;
++----------------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++-----------------------------------------------------------------------------------------------------------------+
+; LNT-30017 - Register Output Driving Its Own Asynchronous Control Signal Directly or Through Combinational Logic ;
++-----------------------------------------------------------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++-------------------------------------------------+
+; RES-30132 - Registers May Not Be Properly Reset ;
++-------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	
+		max_violations = 5000
+		exclude_ram_blocks_without_mif = True
++---------------------------------------------------------------------------------------------------------------------+
+; RES-30133 - Embedded Memory Blocks with Initialized Content That Might be Modified Before the FPGA Enters User Mode ;
++---------------------------------------------------------------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++-----------------------------------------------------------+
+; RES-30134 - Registers Not Reachable from Reset Release IP ;
++-----------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++--------------------------------------------------------+
+; TMC-20052 - Paths with Post Synthesis Inferred Latches ;
++--------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Low
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++------------------------------------------------+
+; FLP-10500 - Non Driving Top Level Inputs Found ;
++------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Low
+Number of violations: 	0
+Rule Parameters:      	
+		max_violations = 5000
+		DSP_Chain_Threshold = 2
+		DSP_Check_User_WYSIWYGs = True
++--------------------------------------------------------------+
+; LNT-50006 - DSP Control Signal Registers Reset Mode Mismatch ;
++--------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Low
+Number of violations: 	0
+Rule Parameters:      	
+		max_violations = 5000
+		DSP_High_Fanout_Net_Threshold = 500
+		DSP_Chain_Threshold = 2
+		DSP_Check_User_WYSIWYGs = True
++---------------------------------------------------+
+; TMC-20053 - DSP Inputs Driven by High Fan-Out Net ;
++---------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Low
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++-----------------------------------------------------------------------+
+; TMC-20500 - Hierarchical Tree Duplication was Shallower than Possible ;
++-----------------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Low
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++------------------------------------------------------------------------+
+; TMC-20501 - Hierarchical Tree Duplication was Shallower than Requested ;
++------------------------------------------------------------------------+
+
+

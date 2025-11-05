@@ -1,0 +1,33 @@
+Warning (125092): Tcl Script file ./constraints/cxltyp2_quartus_constraints_ed_en.tcl not found.
+Warning (125092): Tcl Script file ./constraints/qsf_device_pinout.tcl not found.
+Info: *******************************************************************
+Info: Running Quartus Prime Assembler
+    Info: Version 24.3.0 Build 212 11/18/2024 SC Pro Edition
+    Info: Copyright (C) 2024  Intel Corporation. All rights reserved.
+    Info: Your use of Intel Corporation's design tools, logic functions 
+    Info: and other software and tools, and any partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Intel Program License 
+    Info: Subscription Agreement, the Intel Quartus Prime License Agreement,
+    Info: the Intel FPGA IP License Agreement, or other applicable license
+    Info: agreement, including, without limitation, that your use is for
+    Info: the sole purpose of programming logic devices manufactured by
+    Info: Intel and sold by Intel or its authorized distributors.  Please
+    Info: refer to the Intel FPGA Software License Subscription Agreements 
+    Info: on the Quartus Prime software download page.
+    Info: Processing started: Sun Nov  2 21:11:54 2025
+    Info: System process ID: 25088
+Info: Command: quartus_asm --read_settings_files=on --write_settings_files=off cxltyp2_ed -c cxltyp2_ed
+Info (16677): Loading final database.
+Info (16734): Loading "final" snapshot for partition "root_partition".
+Info (16734): Loading "final" snapshot for partition "auto_fab_0".
+Info (16678): Successfully loaded final database: elapsed time is 00:00:31.
+Critical Warning (24567): The design is using an internal oscillator along with transceivers, EMIF, MIPI, and PHY Lite interfaces.
+Info (20553): Using CVP Hash 0123456789ABCDEF001122334455667788889999AAAABBBBCCCCDDDDEEEEFFFF
+Info: Quartus Prime Assembler was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 10546 megabytes
+    Info: Processing ended: Sun Nov  2 21:14:01 2025
+    Info: Elapsed time: 00:02:07
+    Info: System process ID: 25088

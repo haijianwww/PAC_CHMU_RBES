@@ -1,0 +1,1191 @@
+Design Assistant report for cxltyp2_ed
+Tue Oct 28 11:15:58 2025
+Quartus Prime Version 24.3.0 Build 212 11/18/2024 SC Pro Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Design Assistant (Signoff) Results - 6 of 84 Rules Failed
+  3. CDC-50001 - 1-Bit Asynchronous Transfer Not Synchronized
+  4. CDC-50007 - CDC Bus Constructed with Multi-bit Synchronizer Chains with Insufficient Constraints
+  5. TMC-20026 - Empty Collection Due To Unmatched Filter
+  6. TMC-20602 - Registers with High Timing Path Endpoint Tension
+  7. FLP-40006 - Pipelining Registers That Might Be Recoverable
+  8. LNT-30010 - Nets Driving both Reset and Clock Enable Signals
+  9. CDC-50002 - 1-Bit Asynchronous Transfer with Insufficient Constraints
+ 10. CDC-50003 - CE-Type CDC Transfer with Insufficient Constraints
+ 11. CDC-50004 - MUX-type CDC Transfer with Insufficient Constraints
+ 12. CDC-50005 - CDC Bus Constructed with Multi-bit Synchronizer Chains of Different Lengths
+ 13. CDC-50006 - CDC Bus Constructed with Unsynchronized Registers
+ 14. CDC-50011 - Combinational Logic Before Synchronizer Chain
+ 15. CDC-50012 - Multiple Clock Domains Driving a Synchronizer Chain
+ 16. CLK-30026 - Missing Clock Assignment
+ 17. CLK-30027 - Multiple Clock Assignments Found
+ 18. CLK-30028 - Invalid Generated Clock
+ 19. CLK-30029 - Invalid Clock Assignments
+ 20. CLK-30030 - PLL Setting Violation
+ 21. CLK-30033 - Invalid Clock Group Assignment
+ 22. CLK-30034 - Clock Pairs Missing Logically Exclusive Clock Group Assignment
+ 23. CLK-30035 - Clock Pairs Missing Physically Exclusive Clock Group Assignment
+ 24. CLK-30042 - Incorrect Clock Group Type
+ 25. RES-50001 - Asynchronous Reset Is Not Synchronized
+ 26. RES-50002 - Asynchronous Reset is Insufficiently Synchronized
+ 27. RES-50003 - Asynchronous Reset with Insufficient Constraints
+ 28. RES-50004 - Multiple Asynchronous Resets within Reset Synchronizer Chain
+ 29. TMC-20011 - Missing Input Delay Constraint
+ 30. TMC-20012 - Missing Output Delay Constraint
+ 31. TMC-20013 - Partial Input Delay
+ 32. TMC-20014 - Partial Output Delay
+ 33. TMC-20015 - Inconsistent Min-Max Delay
+ 34. TMC-20016 - Invalid Reference Pin
+ 35. TMC-20017 - Loops Detected
+ 36. TMC-20019 - Partial Multicycle Assignment
+ 37. TMC-20022 - I/O Delay Assignment Missing Parameters
+ 38. TMC-20023 - Invalid Set Net Delay Assignment
+ 39. TMC-20027 - Collection Filter Matching Multiple Types
+ 40. TMC-30041 - Constraint with Invalid Clock Reference
+ 41. CDC-50103 - Unsynchronized Intra-Clock Forced Synchronizer
+ 42. CLK-30031 - Input Delay Assigned to Clock
+ 43. CLK-30032 - Improper Clock Targets
+ 44. FLP-10000 - Physical RAM with Utilization Below Threshold
+ 45. LNT-30023 - Reset Nets with Polarity Conflict
+ 46. RDC-50003 - Multiple Asynchronous Reset Synchronizers in the Same Clock Domain
+ 47. TMC-20018 - Unsupported Latches Detected
+ 48. TMC-20021 - Partial Min-Max Delay Assignment
+ 49. TMC-20024 - Synchronous Data Delay Assignment
+ 50. TMC-20025 - Ignored or Overridden Constraints
+ 51. TMC-20200 - Paths Failing Setup Analysis with Impossible Requirements
+ 52. TMC-20201 - Paths Failing Setup Analysis with High Clock Skew
+ 53. TMC-20204 - Endpoints of Paths Failing Setup Analysis with Retiming Restrictions
+ 54. TMC-20205 - Endpoints of Paths Failing Setup Analysis with Explicit Power-Up States that Restrict Retiming
+ 55. TMC-20206 - DSP Blocks with Unregistered Outputs that are the Source of Paths Failing Setup Analysis
+ 56. TMC-20207 - DSP Blocks with Unregistered Inputs that are the Destination of Paths Failing Setup Analysis
+ 57. TMC-20208 - RAM Blocks with Unregistered Outputs that are the Source of Paths Failing Setup Analysis
+ 58. TMC-20209 - Paths Failing Setup Analysis with High Routing Delay due to Congestion
+ 59. TMC-20210 - Paths Failing Setup Analysis with High Routing Delay Added for Hold
+ 60. TMC-20212 - Paths Failing Setup Analysis with Global Routing in Data Path
+ 61. TMC-20213 - Paths Failing Setup Analysis with Locally Routed Clock
+ 62. TMC-20214 - Buses with Incoming Paths Failing Setup Analysis with Multiple Sequential Adder Chains
+ 63. TMC-20215 - Buses with Incoming Paths Failing Setup Analysis with Multipliers Implemented in Logic
+ 64. TMC-20216 - Paths Failing Setup Analysis with Inferred-RAM Shift Register Endpoints
+ 65. TMC-20217 - Paths Failing Setup Analysis with Clock-As-Data
+ 66. TMC-20219 - DSP Blocks with Restricted Fmax below Required Fmax
+ 67. TMC-20220 - RAM Blocks with Restricted Fmax below Required Fmax
+ 68. TMC-20221 - Nodes Failing Minimum Pulse Width Due to Clock Pulse Collapse
+ 69. TMC-20312 - Paths Failing Hold Analysis with Global Routing in Data Path
+ 70. TMC-20313 - Paths Failing Hold Analysis with Locally Routed Clock
+ 71. TMC-20712 - Paths Failing Recovery Analysis with Global Routing in Data Path
+ 72. TMC-20713 - Paths Failing Recovery Analysis with Locally Routed Clock
+ 73. TMC-20812 - Paths Failing Removal Analysis with Global Routing in Data Path
+ 74. TMC-20813 - Paths Failing Removal Analysis with Locally Routed Clock
+ 75. CDC-50008 - CDC Bus Constructed with Multi-bit Synchronizer Chains
+ 76. CDC-50101 - Intra-Clock False Path Synchronizer
+ 77. CDC-50102 - Synchronizer after CDC Topology with Control Signal
+ 78. RES-50010 - Reset Synchronizer Chains with Constant Output
+ 79. RES-50101 - Intra-Clock False Path Reset Synchronizer
+ 80. TMC-20020 - Invalid Multicycle Assignment
+ 81. TMC-20550 - Automatically Selected Duplication Candidate Rejected for Placement Constraint
+ 82. TMC-20551 - Automatically Selected Duplication Candidate Likely Requires More Duplication
+ 83. TMC-20552 - User Selected Duplication Candidate was Rejected
+ 84. TMC-20601 - Registers with High Immediate Fan-Out Tension
+ 85. TMC-20603 - Registers with High Immediate Fan-Out Span
+ 86. TMC-20604 - Registers with High Timing Path Endpoint Span
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2024  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the Intel FPGA Software License Subscription Agreements 
+on the Quartus Prime software download page.
+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Design Assistant (Signoff) Results - 6 of 84 Rules Failed                                                                                                                                    ;
++------------------------------------------------------------------------------------------------------------+----------+------------+--------+------------------------------------------------+
+; Rule                                                                                                       ; Severity ; Violations ; Waived ; Tags                                           ;
++------------------------------------------------------------------------------------------------------------+----------+------------+--------+------------------------------------------------+
+; CDC-50001 - 1-Bit Asynchronous Transfer Not Synchronized                                                   ; High     ; 32         ; 0      ; synchronizer                                   ;
+; CDC-50007 - CDC Bus Constructed with Multi-bit Synchronizer Chains with Insufficient Constraints           ; High     ; 3          ; 0      ; synchronizer, cdc-bus                          ;
+; TMC-20026 - Empty Collection Due To Unmatched Filter                                                       ; Medium   ; 16         ; 0      ; sdc                                            ;
+; TMC-20602 - Registers with High Timing Path Endpoint Tension                                               ; Low      ; 48         ; 0      ; register-duplication, register-spread, place   ;
+; FLP-40006 - Pipelining Registers That Might Be Recoverable                                                 ; Low      ; 8          ; 0      ; resource-usage                                 ;
+; LNT-30010 - Nets Driving both Reset and Clock Enable Signals                                               ; Low      ; 7          ; 0      ; reset-usage                                    ;
+; CDC-50002 - 1-Bit Asynchronous Transfer with Insufficient Constraints                                      ; High     ; 0          ; 0      ; synchronizer                                   ;
+; CDC-50003 - CE-Type CDC Transfer with Insufficient Constraints                                             ; High     ; 0          ; 0      ; cdc-bus                                        ;
+; CDC-50004 - MUX-type CDC Transfer with Insufficient Constraints                                            ; High     ; 0          ; 0      ; cdc-bus                                        ;
+; CDC-50005 - CDC Bus Constructed with Multi-bit Synchronizer Chains of Different Lengths                    ; High     ; 0          ; 0      ; synchronizer, cdc-bus                          ;
+; CDC-50006 - CDC Bus Constructed with Unsynchronized Registers                                              ; High     ; 0          ; 0      ; synchronizer, cdc-bus                          ;
+; CDC-50011 - Combinational Logic Before Synchronizer Chain                                                  ; High     ; 0          ; 0      ; synchronizer                                   ;
+; CDC-50012 - Multiple Clock Domains Driving a Synchronizer Chain                                            ; High     ; 0          ; 0      ; synchronizer                                   ;
+; CLK-30026 - Missing Clock Assignment                                                                       ; High     ; 0          ; 0      ; sdc                                            ;
+; CLK-30027 - Multiple Clock Assignments Found                                                               ; High     ; 0          ; 0      ; sdc                                            ;
+; CLK-30028 - Invalid Generated Clock                                                                        ; High     ; 0          ; 0      ; sdc                                            ;
+; CLK-30029 - Invalid Clock Assignments                                                                      ; High     ; 0          ; 0      ; sdc                                            ;
+; CLK-30030 - PLL Setting Violation                                                                          ; High     ; 0          ; 0      ; sdc                                            ;
+; CLK-30033 - Invalid Clock Group Assignment                                                                 ; High     ; 0          ; 0      ; sdc                                            ;
+; CLK-30034 - Clock Pairs Missing Logically Exclusive Clock Group Assignment                                 ; High     ; 0          ; 0      ; sdc                                            ;
+; CLK-30035 - Clock Pairs Missing Physically Exclusive Clock Group Assignment                                ; High     ; 0          ; 0      ; sdc                                            ;
+; CLK-30042 - Incorrect Clock Group Type                                                                     ; High     ; 0          ; 0      ; sdc                                            ;
+; RES-50001 - Asynchronous Reset Is Not Synchronized                                                         ; High     ; 0          ; 0      ; synchronizer                                   ;
+; RES-50002 - Asynchronous Reset is Insufficiently Synchronized                                              ; High     ; 0          ; 0      ; synchronizer                                   ;
+; RES-50003 - Asynchronous Reset with Insufficient Constraints                                               ; High     ; 0          ; 0      ; synchronizer                                   ;
+; RES-50004 - Multiple Asynchronous Resets within Reset Synchronizer Chain                                   ; High     ; 0          ; 0      ; synchronizer                                   ;
+; TMC-20011 - Missing Input Delay Constraint                                                                 ; High     ; 0          ; 0      ; sdc, system                                    ;
+; TMC-20012 - Missing Output Delay Constraint                                                                ; High     ; 0          ; 0      ; sdc, system                                    ;
+; TMC-20013 - Partial Input Delay                                                                            ; High     ; 0          ; 0      ; sdc, system                                    ;
+; TMC-20014 - Partial Output Delay                                                                           ; High     ; 0          ; 0      ; sdc, system                                    ;
+; TMC-20015 - Inconsistent Min-Max Delay                                                                     ; High     ; 0          ; 0      ; sdc                                            ;
+; TMC-20016 - Invalid Reference Pin                                                                          ; High     ; 0          ; 0      ; sdc, system                                    ;
+; TMC-20017 - Loops Detected                                                                                 ; High     ; 0          ; 0      ; sdc                                            ;
+; TMC-20019 - Partial Multicycle Assignment                                                                  ; High     ; 0          ; 0      ; sdc                                            ;
+; TMC-20022 - I/O Delay Assignment Missing Parameters                                                        ; High     ; 0          ; 0      ; sdc, system                                    ;
+; TMC-20023 - Invalid Set Net Delay Assignment                                                               ; High     ; 0          ; 0      ; sdc                                            ;
+; TMC-20027 - Collection Filter Matching Multiple Types                                                      ; High     ; 0          ; 0      ; sdc                                            ;
+; TMC-30041 - Constraint with Invalid Clock Reference                                                        ; High     ; 0          ; 0      ; sdc                                            ;
+; CDC-50103 - Unsynchronized Intra-Clock Forced Synchronizer                                                 ; Medium   ; 0          ; 0      ; synchronizer                                   ;
+; CLK-30031 - Input Delay Assigned to Clock                                                                  ; Medium   ; 0          ; 0      ; sdc, system                                    ;
+; CLK-30032 - Improper Clock Targets                                                                         ; Medium   ; 0          ; 0      ; sdc                                            ;
+; FLP-10000 - Physical RAM with Utilization Below Threshold                                                  ; Medium   ; 0          ; 0      ; ram, resource-usage                            ;
+; LNT-30023 - Reset Nets with Polarity Conflict                                                              ; Medium   ; 0          ; 0      ; reset-usage                                    ;
+; RDC-50003 - Multiple Asynchronous Reset Synchronizers in the Same Clock Domain                             ; Medium   ; 0          ; 0      ; reset-usage, reset-reachability                ;
+; TMC-20018 - Unsupported Latches Detected                                                                   ; Medium   ; 0          ; 0      ; latch                                          ;
+; TMC-20021 - Partial Min-Max Delay Assignment                                                               ; Medium   ; 0          ; 0      ; sdc                                            ;
+; TMC-20024 - Synchronous Data Delay Assignment                                                              ; Medium   ; 0          ; 0      ; sdc                                            ;
+; TMC-20025 - Ignored or Overridden Constraints                                                              ; Medium   ; 0          ; 0      ; sdc                                            ;
+; TMC-20200 - Paths Failing Setup Analysis with Impossible Requirements                                      ; Medium   ; 0          ; 0      ; intrinsic-margin, impossible-requirements, sdc ;
+; TMC-20201 - Paths Failing Setup Analysis with High Clock Skew                                              ; Medium   ; 0          ; 0      ; intrinsic-margin                               ;
+; TMC-20204 - Endpoints of Paths Failing Setup Analysis with Retiming Restrictions                           ; Medium   ; 0          ; 0      ; retime                                         ;
+; TMC-20205 - Endpoints of Paths Failing Setup Analysis with Explicit Power-Up States that Restrict Retiming ; Medium   ; 0          ; 0      ; retime                                         ;
+; TMC-20206 - DSP Blocks with Unregistered Outputs that are the Source of Paths Failing Setup Analysis       ; Medium   ; 0          ; 0      ; dsp                                            ;
+; TMC-20207 - DSP Blocks with Unregistered Inputs that are the Destination of Paths Failing Setup Analysis   ; Medium   ; 0          ; 0      ; dsp                                            ;
+; TMC-20208 - RAM Blocks with Unregistered Outputs that are the Source of Paths Failing Setup Analysis       ; Medium   ; 0          ; 0      ; ram                                            ;
+; TMC-20209 - Paths Failing Setup Analysis with High Routing Delay due to Congestion                         ; Medium   ; 0          ; 0      ; route                                          ;
+; TMC-20210 - Paths Failing Setup Analysis with High Routing Delay Added for Hold                            ; Medium   ; 0          ; 0      ; route                                          ;
+; TMC-20212 - Paths Failing Setup Analysis with Global Routing in Data Path                                  ; Medium   ; 0          ; 0      ; global-signal, route                           ;
+; TMC-20213 - Paths Failing Setup Analysis with Locally Routed Clock                                         ; Medium   ; 0          ; 0      ; global-signal, clock-skew                      ;
+; TMC-20214 - Buses with Incoming Paths Failing Setup Analysis with Multiple Sequential Adder Chains         ; Medium   ; 0          ; 0      ; logic-levels                                   ;
+; TMC-20215 - Buses with Incoming Paths Failing Setup Analysis with Multipliers Implemented in Logic         ; Medium   ; 0          ; 0      ; logic-levels, dsp                              ;
+; TMC-20216 - Paths Failing Setup Analysis with Inferred-RAM Shift Register Endpoints                        ; Medium   ; 0          ; 0      ; ram                                            ;
+; TMC-20217 - Paths Failing Setup Analysis with Clock-As-Data                                                ; Medium   ; 0          ; 0      ; nonstandard-timing                             ;
+; TMC-20219 - DSP Blocks with Restricted Fmax below Required Fmax                                            ; Medium   ; 0          ; 0      ; dsp, minimum-pulse-width                       ;
+; TMC-20220 - RAM Blocks with Restricted Fmax below Required Fmax                                            ; Medium   ; 0          ; 0      ; ram, minimum-pulse-width                       ;
+; TMC-20221 - Nodes Failing Minimum Pulse Width Due to Clock Pulse Collapse                                  ; Medium   ; 0          ; 0      ; minimum-pulse-width                            ;
+; TMC-20312 - Paths Failing Hold Analysis with Global Routing in Data Path                                   ; Medium   ; 0          ; 0      ; global-signal, route                           ;
+; TMC-20313 - Paths Failing Hold Analysis with Locally Routed Clock                                          ; Medium   ; 0          ; 0      ; global-signal, clock-skew                      ;
+; TMC-20712 - Paths Failing Recovery Analysis with Global Routing in Data Path                               ; Medium   ; 0          ; 0      ; global-signal, route                           ;
+; TMC-20713 - Paths Failing Recovery Analysis with Locally Routed Clock                                      ; Medium   ; 0          ; 0      ; global-signal, clock-skew                      ;
+; TMC-20812 - Paths Failing Removal Analysis with Global Routing in Data Path                                ; Medium   ; 0          ; 0      ; global-signal, route                           ;
+; TMC-20813 - Paths Failing Removal Analysis with Locally Routed Clock                                       ; Medium   ; 0          ; 0      ; global-signal, clock-skew                      ;
+; CDC-50008 - CDC Bus Constructed with Multi-bit Synchronizer Chains                                         ; Low      ; 0          ; 0      ; synchronizer, cdc-bus                          ;
+; CDC-50101 - Intra-Clock False Path Synchronizer                                                            ; Low      ; 0          ; 0      ; synchronizer, false-positive-synchronizer      ;
+; CDC-50102 - Synchronizer after CDC Topology with Control Signal                                            ; Low      ; 0          ; 0      ; synchronizer, false-positive-synchronizer      ;
+; RES-50010 - Reset Synchronizer Chains with Constant Output                                                 ; Low      ; 0          ; 0      ; synchronizer                                   ;
+; RES-50101 - Intra-Clock False Path Reset Synchronizer                                                      ; Low      ; 0          ; 0      ; synchronizer, false-positive-synchronizer      ;
+; TMC-20020 - Invalid Multicycle Assignment                                                                  ; Low      ; 0          ; 0      ; sdc                                            ;
+; TMC-20550 - Automatically Selected Duplication Candidate Rejected for Placement Constraint                 ; Low      ; 0          ; 0      ; register-duplication, place                    ;
+; TMC-20551 - Automatically Selected Duplication Candidate Likely Requires More Duplication                  ; Low      ; 0          ; 0      ; register-duplication, place                    ;
+; TMC-20552 - User Selected Duplication Candidate was Rejected                                               ; Low      ; 0          ; 0      ; register-duplication, place                    ;
+; TMC-20601 - Registers with High Immediate Fan-Out Tension                                                  ; Low      ; 0          ; 0      ; register-duplication, register-spread, place   ;
+; TMC-20603 - Registers with High Immediate Fan-Out Span                                                     ; Low      ; 0          ; 0      ; register-duplication, register-spread, place   ;
+; TMC-20604 - Registers with High Timing Path Endpoint Span                                                  ; Low      ; 0          ; 0      ; register-duplication, register-spread, place   ;
++------------------------------------------------------------------------------------------------------------+----------+------------+--------+------------------------------------------------+
+
+
+Status:		FAIL
+Severity:		High
+Number of violations: 	32
+Rule Parameters:      	max_violations = 500
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; CDC-50001 - 1-Bit Asynchronous Transfer Not Synchronized                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ;
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+-----------------------+--------+
+; From                                                                                                                                                                                                                                                                                                                                                                       ; To                                                                                                    ; From Clock                                                                                                                                         ; To Clock                                                                                             ; Reason                ; Waived ;
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+-----------------------+--------+
+; ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][27]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][28]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][29]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][30]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][31] ; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|pac_top_inst|ofw_buf_afu_inst|ofw_buf_tail_ptr[0]  ; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|gen_clkrst|cxl_memexp_sip_clkgen|rnr_ial_sip_clkgen_pll_sbr_clk ; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_ip|rtile_cxl_ip.coreclkout_hip ; Asynchronous transfer ;        ;
+; ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][27]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][28]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][29]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][30]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][31] ; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|pac_top_inst|ofw_buf_afu_inst|ofw_buf_tail_ptr[10] ; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|gen_clkrst|cxl_memexp_sip_clkgen|rnr_ial_sip_clkgen_pll_sbr_clk ; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_ip|rtile_cxl_ip.coreclkout_hip ; Asynchronous transfer ;        ;
+; ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][27]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][28]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][29]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][30]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][31] ; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|pac_top_inst|ofw_buf_afu_inst|ofw_buf_tail_ptr[11] ; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|gen_clkrst|cxl_memexp_sip_clkgen|rnr_ial_sip_clkgen_pll_sbr_clk ; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_ip|rtile_cxl_ip.coreclkout_hip ; Asynchronous transfer ;        ;
+; ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][27]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][28]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][29]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][30]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][31] ; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|pac_top_inst|ofw_buf_afu_inst|ofw_buf_tail_ptr[12] ; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|gen_clkrst|cxl_memexp_sip_clkgen|rnr_ial_sip_clkgen_pll_sbr_clk ; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_ip|rtile_cxl_ip.coreclkout_hip ; Asynchronous transfer ;        ;
+; ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][27]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][28]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][29]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][30]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][31] ; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|pac_top_inst|ofw_buf_afu_inst|ofw_buf_tail_ptr[13] ; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|gen_clkrst|cxl_memexp_sip_clkgen|rnr_ial_sip_clkgen_pll_sbr_clk ; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_ip|rtile_cxl_ip.coreclkout_hip ; Asynchronous transfer ;        ;
+; ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][27]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][28]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][29]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][30]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][31] ; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|pac_top_inst|ofw_buf_afu_inst|ofw_buf_tail_ptr[14] ; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|gen_clkrst|cxl_memexp_sip_clkgen|rnr_ial_sip_clkgen_pll_sbr_clk ; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_ip|rtile_cxl_ip.coreclkout_hip ; Asynchronous transfer ;        ;
+; ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][27]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][28]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][29]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][30]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][31] ; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|pac_top_inst|ofw_buf_afu_inst|ofw_buf_tail_ptr[15] ; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|gen_clkrst|cxl_memexp_sip_clkgen|rnr_ial_sip_clkgen_pll_sbr_clk ; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_ip|rtile_cxl_ip.coreclkout_hip ; Asynchronous transfer ;        ;
+; ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][27]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][28]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][29]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][30]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][31] ; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|pac_top_inst|ofw_buf_afu_inst|ofw_buf_tail_ptr[16] ; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|gen_clkrst|cxl_memexp_sip_clkgen|rnr_ial_sip_clkgen_pll_sbr_clk ; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_ip|rtile_cxl_ip.coreclkout_hip ; Asynchronous transfer ;        ;
+; ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][27]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][28]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][29]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][30]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][31] ; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|pac_top_inst|ofw_buf_afu_inst|ofw_buf_tail_ptr[17] ; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|gen_clkrst|cxl_memexp_sip_clkgen|rnr_ial_sip_clkgen_pll_sbr_clk ; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_ip|rtile_cxl_ip.coreclkout_hip ; Asynchronous transfer ;        ;
+; ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][27]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][28]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][29]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][30]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][31] ; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|pac_top_inst|ofw_buf_afu_inst|ofw_buf_tail_ptr[18] ; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|gen_clkrst|cxl_memexp_sip_clkgen|rnr_ial_sip_clkgen_pll_sbr_clk ; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_ip|rtile_cxl_ip.coreclkout_hip ; Asynchronous transfer ;        ;
+; ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][27]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][28]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][29]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][30]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][31] ; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|pac_top_inst|ofw_buf_afu_inst|ofw_buf_tail_ptr[19] ; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|gen_clkrst|cxl_memexp_sip_clkgen|rnr_ial_sip_clkgen_pll_sbr_clk ; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_ip|rtile_cxl_ip.coreclkout_hip ; Asynchronous transfer ;        ;
+; ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][27]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][28]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][29]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][30]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][31] ; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|pac_top_inst|ofw_buf_afu_inst|ofw_buf_tail_ptr[1]  ; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|gen_clkrst|cxl_memexp_sip_clkgen|rnr_ial_sip_clkgen_pll_sbr_clk ; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_ip|rtile_cxl_ip.coreclkout_hip ; Asynchronous transfer ;        ;
+; ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][27]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][28]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][29]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][30]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][31] ; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|pac_top_inst|ofw_buf_afu_inst|ofw_buf_tail_ptr[20] ; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|gen_clkrst|cxl_memexp_sip_clkgen|rnr_ial_sip_clkgen_pll_sbr_clk ; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_ip|rtile_cxl_ip.coreclkout_hip ; Asynchronous transfer ;        ;
+; ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][27]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][28]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][29]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][30]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][31] ; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|pac_top_inst|ofw_buf_afu_inst|ofw_buf_tail_ptr[21] ; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|gen_clkrst|cxl_memexp_sip_clkgen|rnr_ial_sip_clkgen_pll_sbr_clk ; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_ip|rtile_cxl_ip.coreclkout_hip ; Asynchronous transfer ;        ;
+; ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][27]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][28]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][29]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][30]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][31] ; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|pac_top_inst|ofw_buf_afu_inst|ofw_buf_tail_ptr[22] ; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|gen_clkrst|cxl_memexp_sip_clkgen|rnr_ial_sip_clkgen_pll_sbr_clk ; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_ip|rtile_cxl_ip.coreclkout_hip ; Asynchronous transfer ;        ;
+; ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][27]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][28]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][29]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][30]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][31] ; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|pac_top_inst|ofw_buf_afu_inst|ofw_buf_tail_ptr[23] ; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|gen_clkrst|cxl_memexp_sip_clkgen|rnr_ial_sip_clkgen_pll_sbr_clk ; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_ip|rtile_cxl_ip.coreclkout_hip ; Asynchronous transfer ;        ;
+; ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][27]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][28]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][29]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][30]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][31] ; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|pac_top_inst|ofw_buf_afu_inst|ofw_buf_tail_ptr[24] ; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|gen_clkrst|cxl_memexp_sip_clkgen|rnr_ial_sip_clkgen_pll_sbr_clk ; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_ip|rtile_cxl_ip.coreclkout_hip ; Asynchronous transfer ;        ;
+; ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][27]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][28]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][29]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][30]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][31] ; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|pac_top_inst|ofw_buf_afu_inst|ofw_buf_tail_ptr[25] ; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|gen_clkrst|cxl_memexp_sip_clkgen|rnr_ial_sip_clkgen_pll_sbr_clk ; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_ip|rtile_cxl_ip.coreclkout_hip ; Asynchronous transfer ;        ;
+; ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][27]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][28]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][29]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][30]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][31] ; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|pac_top_inst|ofw_buf_afu_inst|ofw_buf_tail_ptr[26] ; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|gen_clkrst|cxl_memexp_sip_clkgen|rnr_ial_sip_clkgen_pll_sbr_clk ; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_ip|rtile_cxl_ip.coreclkout_hip ; Asynchronous transfer ;        ;
+; ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][27]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][28]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][29]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][30]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][31] ; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|pac_top_inst|ofw_buf_afu_inst|ofw_buf_tail_ptr[27] ; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|gen_clkrst|cxl_memexp_sip_clkgen|rnr_ial_sip_clkgen_pll_sbr_clk ; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_ip|rtile_cxl_ip.coreclkout_hip ; Asynchronous transfer ;        ;
+; ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][27]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][28]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][29]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][30]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][31] ; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|pac_top_inst|ofw_buf_afu_inst|ofw_buf_tail_ptr[28] ; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|gen_clkrst|cxl_memexp_sip_clkgen|rnr_ial_sip_clkgen_pll_sbr_clk ; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_ip|rtile_cxl_ip.coreclkout_hip ; Asynchronous transfer ;        ;
+; ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][27]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][28]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][29]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][30]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][31] ; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|pac_top_inst|ofw_buf_afu_inst|ofw_buf_tail_ptr[29] ; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|gen_clkrst|cxl_memexp_sip_clkgen|rnr_ial_sip_clkgen_pll_sbr_clk ; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_ip|rtile_cxl_ip.coreclkout_hip ; Asynchronous transfer ;        ;
+; ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][27]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][28]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][29]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][30]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][31] ; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|pac_top_inst|ofw_buf_afu_inst|ofw_buf_tail_ptr[2]  ; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|gen_clkrst|cxl_memexp_sip_clkgen|rnr_ial_sip_clkgen_pll_sbr_clk ; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_ip|rtile_cxl_ip.coreclkout_hip ; Asynchronous transfer ;        ;
+; ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][27]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][28]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][29]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][30]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][31] ; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|pac_top_inst|ofw_buf_afu_inst|ofw_buf_tail_ptr[30] ; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|gen_clkrst|cxl_memexp_sip_clkgen|rnr_ial_sip_clkgen_pll_sbr_clk ; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_ip|rtile_cxl_ip.coreclkout_hip ; Asynchronous transfer ;        ;
+; ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][27]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][28]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][29]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][30]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][31] ; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|pac_top_inst|ofw_buf_afu_inst|ofw_buf_tail_ptr[31] ; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|gen_clkrst|cxl_memexp_sip_clkgen|rnr_ial_sip_clkgen_pll_sbr_clk ; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_ip|rtile_cxl_ip.coreclkout_hip ; Asynchronous transfer ;        ;
+; ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][27]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][28]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][29]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][30]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][31] ; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|pac_top_inst|ofw_buf_afu_inst|ofw_buf_tail_ptr[3]  ; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|gen_clkrst|cxl_memexp_sip_clkgen|rnr_ial_sip_clkgen_pll_sbr_clk ; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_ip|rtile_cxl_ip.coreclkout_hip ; Asynchronous transfer ;        ;
+; ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][27]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][28]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][29]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][30]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][31] ; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|pac_top_inst|ofw_buf_afu_inst|ofw_buf_tail_ptr[4]  ; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|gen_clkrst|cxl_memexp_sip_clkgen|rnr_ial_sip_clkgen_pll_sbr_clk ; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_ip|rtile_cxl_ip.coreclkout_hip ; Asynchronous transfer ;        ;
+; ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][27]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][28]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][29]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][30]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][31] ; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|pac_top_inst|ofw_buf_afu_inst|ofw_buf_tail_ptr[5]  ; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|gen_clkrst|cxl_memexp_sip_clkgen|rnr_ial_sip_clkgen_pll_sbr_clk ; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_ip|rtile_cxl_ip.coreclkout_hip ; Asynchronous transfer ;        ;
+; ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][27]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][28]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][29]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][30]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][31] ; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|pac_top_inst|ofw_buf_afu_inst|ofw_buf_tail_ptr[6]  ; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|gen_clkrst|cxl_memexp_sip_clkgen|rnr_ial_sip_clkgen_pll_sbr_clk ; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_ip|rtile_cxl_ip.coreclkout_hip ; Asynchronous transfer ;        ;
+; ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][27]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][28]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][29]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][30]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][31] ; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|pac_top_inst|ofw_buf_afu_inst|ofw_buf_tail_ptr[7]  ; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|gen_clkrst|cxl_memexp_sip_clkgen|rnr_ial_sip_clkgen_pll_sbr_clk ; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_ip|rtile_cxl_ip.coreclkout_hip ; Asynchronous transfer ;        ;
+; ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][27]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][28]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][29]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][30]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][31] ; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|pac_top_inst|ofw_buf_afu_inst|ofw_buf_tail_ptr[8]  ; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|gen_clkrst|cxl_memexp_sip_clkgen|rnr_ial_sip_clkgen_pll_sbr_clk ; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_ip|rtile_cxl_ip.coreclkout_hip ; Asynchronous transfer ;        ;
+; ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][27]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][28]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][29]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][30]   ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|data[24][31] ; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|pac_top_inst|ofw_buf_afu_inst|ofw_buf_tail_ptr[9]  ; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|gen_clkrst|cxl_memexp_sip_clkgen|rnr_ial_sip_clkgen_pll_sbr_clk ; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_ip|rtile_cxl_ip.coreclkout_hip ; Asynchronous transfer ;        ;
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+-----------------------+--------+
+
+
+Status:		FAIL
+Severity:		High
+Number of violations: 	3
+Rule Parameters:      	max_violations = 500
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; CDC-50007 - CDC Bus Constructed with Multi-bit Synchronizer Chains with Insufficient Constraints                                                                                                                                                                                                                                                                                                                                                                                                                  ;
++---------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+--------------+---------------+---------------+---------------+--------+
+; Source Nodes                                                                          ; Synchronization Nodes                                                                 ; From Clock                                                                                           ; To Clock                                                                                                                                           ; Chain Length ; Max Skew      ; Net Delay     ; Data Delay    ; Waived ;
++---------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+--------------+---------------+---------------+---------------+--------+
+; ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|csr_ofw_buf_vld_cnt_eclk[*] ; ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|csr_ofw_buf_vld_cnt_aclk[*] ; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_ip|rtile_cxl_ip.coreclkout_hip ; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|gen_clkrst|cxl_memexp_sip_clkgen|rnr_ial_sip_clkgen_pll_sbr_clk ; 2            ; Unconstrained ; Unconstrained ; Unconstrained ;        ;
+; ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|memRead_counter_buf[*]      ; ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|memRead_counter_aclk[*]     ; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_ip|rtile_cxl_ip.coreclkout_hip ; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|gen_clkrst|cxl_memexp_sip_clkgen|rnr_ial_sip_clkgen_pll_sbr_clk ; 2            ; Unconstrained ; Unconstrained ; Unconstrained ;        ;
+; ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|memWrite_counter_buf[*]     ; ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|memWrite_counter_aclk[*]    ; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_ip|rtile_cxl_ip.coreclkout_hip ; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|gen_clkrst|cxl_memexp_sip_clkgen|rnr_ial_sip_clkgen_pll_sbr_clk ; 2            ; Unconstrained ; Unconstrained ; Unconstrained ;        ;
++---------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+--------------+---------------+---------------+---------------+--------+
+
+
+Status:		FAIL
+Severity:		Medium
+Number of violations: 	16
+Rule Parameters:      	max_violations = 5000
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; TMC-20026 - Empty Collection Due To Unmatched Filter                                                                                                                                                                                                                                                                                                                                                                                                                                 ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------+--------+
+; Empty Collection Filter                                                                                                                                                                                                                                                             ; SDC Command                                                                                                                     ; Location                                            ; Waived ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------+--------+
+; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|GEN_CHAN_COUNT_REG_RSP_FIFO[0].rspfifo_inst|fifo_0|dcfifo_component|auto_generated|ws_dgrp|dffpipe*|dffe*                                                                                                                        ; get_keepers $hier_path|dcfifo_component|auto_generated|ws_dgrp|dffpipe*|dffe*                                                   ; rspfifo_fifo_1930_7prrmpi.sdc:54 (from IP)          ;        ;
+; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|cxl_t2ip_sip_inst|cxl_io_cfg_inst|cxl_io_wrapper_inst|cxl_io_top_inst|cmb_cores[0].cmb_core_inst|phub|qsunit|qs_fifo|dcfifo_component|auto_generated|ws_dgrp|dffpipe*|dffe*                      ; get_keepers $hier_path|dcfifo_component|auto_generated|ws_dgrp|dffpipe*|dffe*                                                   ; cxltyp2.sdc:294 (from IP)                           ;        ;
+; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|cxl_t2ip_sip_inst|cxl_io_cfg_inst|cxl_io_wrapper_inst|cxl_io_top_inst|cmb_cores[0].cmb_core_inst|phub|qsunit|qs_fifo|dcfifo_component|auto_generated|rs_dgwp|dffpipe*|dffe*                      ; get_keepers $hier_path|dcfifo_component|auto_generated|rs_dgwp|dffpipe*|dffe*                                                   ; cxltyp2.sdc:307 (from IP)                           ;        ;
+; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|cxl_t2ip_sip_inst|cxl_io_cfg_inst|cxl_io_wrapper_inst|cxl_io_top_inst|cmb_cores[0].cmb_core_inst|ppgtran|punit|pcfgread1|pq_cfg_read_fifo|dcfifo_component|auto_generated|*rdptr_g*              ; get_keepers $hier_path|dcfifo_component|auto_generated|*rdptr_g*                                                                ; cxltyp2.sdc:293 (from IP)                           ;        ;
+; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|cxl_t2ip_sip_inst|cxl_io_cfg_inst|cxl_io_wrapper_inst|cxl_io_top_inst|cmb_cores[0].cmb_core_inst|ppgtran|punit|pcfgread1|pq_cfg_read_fifo|dcfifo_component|auto_generated|ws_dgrp|dffpipe*|dffe* ; get_keepers $hier_path|dcfifo_component|auto_generated|ws_dgrp|dffpipe*|dffe*                                                   ; cxltyp2.sdc:294 (from IP)                           ;        ;
+; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|cxl_t2ip_sip_inst|cxl_io_cfg_inst|cxl_io_wrapper_inst|cxl_io_top_inst|cmb_cores[0].cmb_core_inst|ppgtran|punit|pcfgread1|pq_cfg_read_fifo|dcfifo_component|auto_generated|delayed_wrptr_g*       ; get_keepers $hier_path|dcfifo_component|auto_generated|delayed_wrptr_g*                                                         ; cxltyp2.sdc:306 (from IP)                           ;        ;
+; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|cxl_t2ip_sip_inst|cxl_io_cfg_inst|cxl_io_wrapper_inst|cxl_io_top_inst|cmb_cores[0].cmb_core_inst|ppgtran|punit|pcfgread1|pq_cfg_read_fifo|dcfifo_component|auto_generated|rs_dgwp|dffpipe*|dffe* ; get_keepers $hier_path|dcfifo_component|auto_generated|rs_dgwp|dffpipe*|dffe*                                                   ; cxltyp2.sdc:307 (from IP)                           ;        ;
+; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|GEN_CHAN_COUNT_EMIF[1].HPS_MEM.emif_inst_2|emif_fm_0_core_usr_clk                                                                                                                                                                ; get_clocks ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|GEN_CHAN_COUNT_EMIF[1].HPS_MEM.emif_inst_2|emif_fm_0_core_usr_clk ; cxltyp2_ed.sdc:232                                  ;        ;
+; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|*|altera_dcfifo_synchronizer_bundle:write_crosser|altera_std_synchronizer_nocut:sync[*].u|din_s1                                                                                                                                     ; get_registers {*|altera_dcfifo_synchronizer_bundle:write_crosser|altera_std_synchronizer_nocut:sync[*].u|din_s1}                ; ccl_master_st_dc_fifo_1953_3qfelpa.sdc:28 (from IP) ;        ;
+; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|*|altera_dcfifo_synchronizer_bundle:read_crosser|altera_std_synchronizer_nocut:sync[*].u|din_s1                                                                                                                                      ; get_registers {*|altera_dcfifo_synchronizer_bundle:read_crosser|altera_std_synchronizer_nocut:sync[*].u|din_s1}                 ; ccl_master_st_dc_fifo_1953_3qfelpa.sdc:31 (from IP) ;        ;
+; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|cxl_t2ip_sip_inst|cxl_io_cfg_inst|cxl_io_wrapper_inst|ip2user_error_intf_cdc_bridge_inst|aer_fifo|dcfifo_component|auto_generated|*rdptr_g*                                                      ; get_keepers $hier_path|dcfifo_component|auto_generated|*rdptr_g*                                                                ; cxltyp2.sdc:293 (from IP)                           ;        ;
+; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|cxl_t2ip_sip_inst|cxl_io_cfg_inst|cxl_io_wrapper_inst|ip2user_error_intf_cdc_bridge_inst|aer_fifo|dcfifo_component|auto_generated|ws_dgrp|dffpipe*|dffe*                                         ; get_keepers $hier_path|dcfifo_component|auto_generated|ws_dgrp|dffpipe*|dffe*                                                   ; cxltyp2.sdc:294 (from IP)                           ;        ;
+; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|cxl_t2ip_sip_inst|cxl_io_cfg_inst|cxl_io_wrapper_inst|ip2user_error_intf_cdc_bridge_inst|aer_fifo|dcfifo_component|auto_generated|delayed_wrptr_g*                                               ; get_keepers $hier_path|dcfifo_component|auto_generated|delayed_wrptr_g*                                                         ; cxltyp2.sdc:306 (from IP)                           ;        ;
+; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|cxl_t2ip_sip_inst|cxl_io_cfg_inst|cxl_io_wrapper_inst|ip2user_error_intf_cdc_bridge_inst|aer_fifo|dcfifo_component|auto_generated|rs_dgwp|dffpipe*|dffe*                                         ; get_keepers $hier_path|dcfifo_component|auto_generated|rs_dgwp|dffpipe*|dffe*                                                   ; cxltyp2.sdc:307 (from IP)                           ;        ;
+; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|cxl_t2ip_sip_inst|cxl_io_cfg_inst|cxl_io_wrapper_inst|cxl_io_top_inst|cmb2avst_top_inst|tx_side_inst|tx_hdr_data_fifos_inst|tlp_crd_chk|dcfifo_component|auto_generated|ws_dgrp|dffpipe*|dffe*   ; get_keepers $hier_path|dcfifo_component|auto_generated|ws_dgrp|dffpipe*|dffe*                                                   ; cxltyp2.sdc:294 (from IP)                           ;        ;
+; intel_rtile_cxl_top_inst|intel_rtile_cxl_top_0|inst_cxl_type2_top|cxl_t2ip_sip_top|cxl_t2ip_sip_inst|cxl_io_cfg_inst|cxl_io_wrapper_inst|cxl_io_top_inst|cmb2avst_top_inst|tx_side_inst|tx_hdr_data_fifos_inst|tlp_crd_chk|dcfifo_component|auto_generated|rs_dgwp|dffpipe*|dffe*   ; get_keepers $hier_path|dcfifo_component|auto_generated|rs_dgwp|dffpipe*|dffe*                                                   ; cxltyp2.sdc:307 (from IP)                           ;        ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------+--------+
+
+
+Status:		FAIL
+Severity:		Low
+Number of violations: 	48
+Rule Parameters:      	
+		max_violations = 5000
+		minimum_tension = 100000
+		ignore_high_fanout_tension = False
+		minimum_sinks = 2
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; TMC-20602 - Registers with High Timing Path Endpoint Tension                                                                                                                                                                                                                                                              ;
++----------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+---------------------+-------------------+-------------------------------------------+---------------------------------------------------+--------+
+; Register Name                                                                                                                                      ; Register Location ; Number of Endpoints ; Endpoint Centroid ; Average Distance of Endpoints to Centroid ; Total Distance of Endpoints to Centroid (Tension) ; Waived ;
++----------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+---------------------+-------------------+-------------------------------------------+---------------------------------------------------+--------+
+; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|GEN_CHAN_COUNT_CHAN_ADAPT[0].mc_channel_adapter_inst|mem_address_mclk[23]                       ; (146, 304)        ; 4237                ; (150, 305)        ; 31                                        ; 135017                                            ;        ;
+; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|GEN_CHAN_COUNT_CHAN_ADAPT[0].mc_channel_adapter_inst|mem_address_mclk[14]                       ; (146, 304)        ; 4235                ; (150, 305)        ; 31                                        ; 134607                                            ;        ;
+; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|GEN_CHAN_COUNT_CHAN_ADAPT[0].mc_channel_adapter_inst|mem_address_mclk[19]                       ; (132, 304)        ; 4223                ; (150, 305)        ; 31                                        ; 134530                                            ;        ;
+; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|GEN_CHAN_COUNT_CHAN_ADAPT[0].mc_channel_adapter_inst|mem_address_mclk[16]                       ; (146, 304)        ; 4222                ; (150, 305)        ; 31                                        ; 134529                                            ;        ;
+; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|GEN_CHAN_COUNT_CHAN_ADAPT[0].mc_channel_adapter_inst|mem_address_mclk[15]                       ; (132, 304)        ; 4222                ; (150, 305)        ; 31                                        ; 134529                                            ;        ;
+; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|GEN_CHAN_COUNT_CHAN_ADAPT[0].mc_channel_adapter_inst|mem_address_mclk[22]                       ; (132, 304)        ; 4223                ; (150, 305)        ; 31                                        ; 134523                                            ;        ;
+; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|GEN_CHAN_COUNT_CHAN_ADAPT[0].mc_channel_adapter_inst|mem_address_mclk[13]~DUPLICATE             ; (132, 304)        ; 4214                ; (150, 305)        ; 31                                        ; 134508                                            ;        ;
+; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|GEN_CHAN_COUNT_CHAN_ADAPT[0].mc_channel_adapter_inst|mem_address_mclk[18]                       ; (149, 304)        ; 4223                ; (150, 305)        ; 31                                        ; 134483                                            ;        ;
+; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|GEN_CHAN_COUNT_CHAN_ADAPT[0].mc_channel_adapter_inst|mem_address_mclk[21]~DUPLICATE             ; (138, 301)        ; 4207                ; (150, 305)        ; 31                                        ; 134437                                            ;        ;
+; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|GEN_CHAN_COUNT_CHAN_ADAPT[0].mc_channel_adapter_inst|mem_address_mclk[17]                       ; (148, 304)        ; 4205                ; (150, 305)        ; 31                                        ; 134392                                            ;        ;
+; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|pac_top_inst|mem_updater_inst|sram_buff_addr_r[0]                                               ; (149, 300)        ; 4117                ; (150, 305)        ; 32                                        ; 133708                                            ;        ;
+; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|GEN_CHAN_COUNT_CHAN_ADAPT[0].mc_channel_adapter_inst|mem_address_mclk[20]~DUPLICATE             ; (149, 304)        ; 4113                ; (150, 305)        ; 32                                        ; 133708                                            ;        ;
+; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|pac_top_inst|mem_updater_inst|sram_buff_addr_r[1]                                               ; (149, 299)        ; 4116                ; (150, 305)        ; 32                                        ; 133702                                            ;        ;
+; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|pac_top_inst|mem_updater_inst|sram_buff_addr_r[2]                                               ; (149, 300)        ; 4115                ; (150, 305)        ; 32                                        ; 133696                                            ;        ;
+; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|pac_top_inst|mem_updater_inst|sram_buff_addr_r[3]                                               ; (149, 300)        ; 4114                ; (150, 305)        ; 32                                        ; 133690                                            ;        ;
+; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|pac_top_inst|mem_updater_inst|sram_buff_addr_r[4]                                               ; (149, 300)        ; 4113                ; (150, 305)        ; 32                                        ; 133684                                            ;        ;
+; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|pac_top_inst|mem_updater_inst|sram_buff_addr_r[5]                                               ; (149, 299)        ; 4112                ; (150, 305)        ; 32                                        ; 133677                                            ;        ;
+; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|pac_top_inst|mem_updater_inst|state_r.ZERO_OUT_WR                                               ; (149, 300)        ; 4111                ; (150, 305)        ; 32                                        ; 133673                                            ;        ;
+; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|pac_top_inst|mem_updater_inst|sram_buff_addr_r[8]                                               ; (149, 299)        ; 4107                ; (150, 305)        ; 32                                        ; 133644                                            ;        ;
+; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|pac_top_inst|mem_updater_inst|sram_buff_addr_r[9]                                               ; (149, 299)        ; 4106                ; (150, 305)        ; 32                                        ; 133637                                            ;        ;
+; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|pac_top_inst|mem_updater_inst|sram_buff_addr_r[11]                                              ; (149, 300)        ; 4104                ; (150, 305)        ; 32                                        ; 133621                                            ;        ;
+; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|pac_top_inst|counter_ctrl_inst|state.WRITE_BACK_COUNTER_S                                       ; (152, 306)        ; 4105                ; (150, 305)        ; 32                                        ; 133614                                            ;        ;
+; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|pac_top_inst|counter_ctrl_inst|state.IDLE_S                                                     ; (152, 306)        ; 4105                ; (150, 305)        ; 32                                        ; 133614                                            ;        ;
+; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|pac_top_inst|counter_ctrl_inst|state.COUNTING_S~DUPLICATE                                       ; (152, 306)        ; 4105                ; (150, 305)        ; 32                                        ; 133614                                            ;        ;
+; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|pac_top_inst|mem_updater_inst|sram_buff_addr_r[12]                                              ; (149, 300)        ; 4102                ; (150, 305)        ; 32                                        ; 133613                                            ;        ;
+; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|pac_top_inst|mem_updater_inst|sram_buff_addr_r[10]                                              ; (149, 300)        ; 4102                ; (150, 305)        ; 32                                        ; 133613                                            ;        ;
+; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|pac_top_inst|mem_updater_inst|sram_buff_addr_r[7]                                               ; (149, 299)        ; 4100                ; (150, 305)        ; 32                                        ; 133602                                            ;        ;
+; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|pac_top_inst|mem_updater_inst|sram_buff_addr_r[13]                                              ; (149, 300)        ; 4100                ; (150, 305)        ; 32                                        ; 133597                                            ;        ;
+; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|pac_top_inst|mem_updater_inst|sram_buff_addr_r[10]~DUPLICATE                                    ; (149, 300)        ; 4099                ; (150, 305)        ; 32                                        ; 133595                                            ;        ;
+; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|pac_top_inst|counter_ctrl_inst|state.WRITE_BACK_COUNTER_S~DUPLICATE                             ; (152, 306)        ; 4097                ; (150, 305)        ; 32                                        ; 133580                                            ;        ;
+; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|pac_top_inst|mem_updater_inst|sram_buff_addr_r[6]                                               ; (149, 300)        ; 4096                ; (150, 305)        ; 32                                        ; 133577                                            ;        ;
+; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|pac_top_inst|addr_buf_2[11]                                                                     ; (152, 305)        ; 4096                ; (150, 305)        ; 32                                        ; 133577                                            ;        ;
+; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|pac_top_inst|addr_buf_2[12]                                                                     ; (152, 305)        ; 4096                ; (150, 305)        ; 32                                        ; 133577                                            ;        ;
+; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|pac_top_inst|addr_buf_2[13]                                                                     ; (153, 305)        ; 4096                ; (150, 305)        ; 32                                        ; 133577                                            ;        ;
+; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|pac_top_inst|addr_buf_2[8]                                                                      ; (149, 305)        ; 4096                ; (150, 305)        ; 32                                        ; 133577                                            ;        ;
+; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|pac_top_inst|addr_buf_2[9]                                                                      ; (149, 305)        ; 4096                ; (150, 305)        ; 32                                        ; 133577                                            ;        ;
+; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|pac_top_inst|addr_buf_2[10]                                                                     ; (152, 305)        ; 4096                ; (150, 305)        ; 32                                        ; 133577                                            ;        ;
+; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|pac_top_inst|addr_buf_2[5]                                                                      ; (149, 305)        ; 4096                ; (150, 305)        ; 32                                        ; 133577                                            ;        ;
+; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|pac_top_inst|addr_buf_2[6]                                                                      ; (153, 304)        ; 4096                ; (150, 305)        ; 32                                        ; 133577                                            ;        ;
+; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|pac_top_inst|addr_buf_2[7]                                                                      ; (149, 304)        ; 4096                ; (150, 305)        ; 32                                        ; 133577                                            ;        ;
+; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|pac_top_inst|addr_buf_2[0]                                                                      ; (147, 304)        ; 4096                ; (150, 305)        ; 32                                        ; 133577                                            ;        ;
+; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|pac_top_inst|addr_buf_2[1]                                                                      ; (153, 305)        ; 4096                ; (150, 305)        ; 32                                        ; 133577                                            ;        ;
+; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|pac_top_inst|addr_buf_2[2]                                                                      ; (153, 305)        ; 4096                ; (150, 305)        ; 32                                        ; 133577                                            ;        ;
+; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|pac_top_inst|addr_buf_2[3]                                                                      ; (153, 305)        ; 4096                ; (150, 305)        ; 32                                        ; 133577                                            ;        ;
+; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|pac_top_inst|addr_buf_2[4]                                                                      ; (153, 305)        ; 4096                ; (150, 305)        ; 32                                        ; 133577                                            ;        ;
+; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|pac_top_inst|valid_buf_2~DUPLICATE_Duplicate_12                                                 ; (152, 305)        ; 4096                ; (150, 305)        ; 32                                        ; 133577                                            ;        ;
+; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|GEN_CHAN_COUNT_CHAN_ADAPT[0].mc_channel_adapter_inst|mc_rmw_shim_inst|rd_cntr[0]~RTM_1DUPLICATE ; (128, 304)        ; 4295                ; (151, 305)        ; 31                                        ; 133213                                            ;        ;
+; ed_top_wrapper_typ2_inst|MC_CHANNEL_INST[0].mc_top|GEN_CHAN_COUNT_CHAN_ADAPT[0].mc_channel_adapter_inst|mem_address_mclk[6]~DUPLICATE              ; (148, 303)        ; 3122                ; (152, 305)        ; 32                                        ; 101074                                            ;        ;
++----------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+---------------------+-------------------+-------------------------------------------+---------------------------------------------------+--------+
+
+
+Status:		FAIL
+Severity:		Low
+Number of violations: 	8
+Rule Parameters:      	
+		max_violations = 5000
+		max_stage_adjustment = -1
+		min_width = 16
+		min_depth = 3
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; FLP-40006 - Pipelining Registers That Might Be Recoverable                                                                                                                                                              ;
++------------------------------------------------------------------------------------------------------------+-----------------------------------------+---------------------------------------------+-----------+--------+
+; Bus Name                                                                                                   ; Recommended Pipelining Stage Adjustment ; Minimum Average Slack of One Bit Across Bus ; Bus Width ; Waived ;
++------------------------------------------------------------------------------------------------------------+-----------------------------------------+---------------------------------------------+-----------+--------+
+; ed_top_wrapper_typ2_inst|intel_cxl_pio_ed_top_inst|PIO_AVST.pio|bam_rw|cpl_req_id_reg1                     ; -3                                      ; 2.009                                       ; 16        ;        ;
+; ed_top_wrapper_typ2_inst|intel_cxl_pio_ed_top_inst|PIO_AVST.bam_cpl|cmd_reg                                ; -2                                      ; 1.955                                       ; 52        ;        ;
+; ed_top_wrapper_typ2_inst|intel_cxl_pio_ed_top_inst|PIO_AVST.bam_cpl|cpl_hdr_reg2                           ; -2                                      ; 2                                           ; 18        ;        ;
+; ed_top_wrapper_typ2_inst|cafu_csr0_avmm_wrapper_inst|inst_cafu_csr0_wrapper|u_cafu_mem_target|axi_rQ.rdata ; -1                                      ; 1.747                                       ; 512       ;        ;
+; ed_top_wrapper_typ2_inst|intel_cxl_pio_ed_top_inst|PIO_AVST.pio|bam_sch_intf|hdr_preproc|avmm_fbe_reg2     ; -1                                      ; 1.899                                       ; 128       ;        ;
+; ed_top_wrapper_typ2_inst|inst_axi_to_avst_bridge|write_tlp_data_strobe                                     ; -1                                      ; 1.864                                       ; 64        ;        ;
+; ed_top_wrapper_typ2_inst|cafu_csr0_avmm_wrapper_inst|ccv_afu_cdc_fifo_inst|treg_ack_pipe[0].data           ; -1                                      ; 1.819                                       ; 56        ;        ;
+; ed_top_wrapper_typ2_inst|inst_axi_to_avst_bridge|write_tlp_header_address                                  ; -1                                      ; 1.871                                       ; 46        ;        ;
++------------------------------------------------------------------------------------------------------------+-----------------------------------------+---------------------------------------------+-----------+--------+
+
+
+Status:		FAIL
+Severity:		Low
+Number of violations: 	7
+Rule Parameters:      	max_violations = 5000
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; LNT-30010 - Nets Driving both Reset and Clock Enable Signals                                                                                                                                                                                                                                                                                                                                                                                                           ;
++------------------------------------------------------+---------------------------+-----------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+--------------------------------------+-------------------------------------+--------------------------------+--------+
+; Driver                                               ; Asynchronous Reset Signal ; Synchronous Reset Signal                                                                                                    ; Clock Enable Signal                                                                                                            ; Number of Asynchronous Reset Signals ; Number of Synchronous Reset Signals ; Number of Clock Enable Signals ; Waived ;
++------------------------------------------------------+---------------------------+-----------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+--------------------------------------+-------------------------------------+--------------------------------+--------+
+; ed_top_wrapper_typ2_inst|ip2hdm_reset_n_f~SynDup_51  ; --                        ; ed_top_wrapper_typ2_inst|inst_axi_to_avst_bridge|axi_arready~.comb|SCLR                                                     ; ed_top_wrapper_typ2_inst|inst_axi_to_avst_bridge|axi_wr_tlp_fifo_rdreq|ENA                                                     ; 0                                    ; 4                                   ; 3                              ;        ;
+; ed_top_wrapper_typ2_inst|ip2hdm_reset_n_f~SynDup_112 ; --                        ; ed_top_wrapper_typ2_inst|inst_axi_to_avst_bridge|axi_b.bvalid|SCLR                                                          ; ed_top_wrapper_typ2_inst|rx_side_inst|rx_hdr_data_fifos_inst|rx_core_fifos_logic.rx_core_fifos|tlp_crd_type_s0_f[1]|ENA        ; 0                                    ; 16                                  ; 89                             ;        ;
+; ed_top_wrapper_typ2_inst|ip2hdm_reset_n_f~SynDup_113 ; --                        ; ed_top_wrapper_typ2_inst|rx_side_inst|rx_hdr_data_fifos_inst|rx_core_fifos_logic.rx_core_fifos|cpl_sop_in_data_cycle|SCLR   ; ed_top_wrapper_typ2_inst|rx_side_inst|rx_hdr_data_fifos_inst|rx_core_fifos_logic.rx_core_fifos|tlp_crd_type_s1_f_decode[1]|ENA ; 0                                    ; 195                                 ; 5                              ;        ;
+; ed_top_wrapper_typ2_inst|ip2hdm_reset_n_f~SynDup_25  ; --                        ; ed_top_wrapper_typ2_inst|rx_side_inst|rx_hdr_data_fifos_inst|rx_core_fifos_logic.rx_core_fifos|hdr_eop_valid_s0_f|SCLR      ; ed_top_wrapper_typ2_inst|rx_side_inst|rx_hdr_data_fifos_inst|rx_core_fifos_logic.rx_core_fifos|fifo_data_din_s2_f[0][256]|ENA  ; 0                                    ; 3                                   ; 94                             ;        ;
+; ed_top_wrapper_typ2_inst|ip2hdm_reset_n_f~SynDup_35  ; --                        ; ed_top_wrapper_typ2_inst|inst_axi_to_avst_bridge|tx_st_data[481]|SCLR                                                       ; ed_top_wrapper_typ2_inst|rx_side_inst|rx_hdr_data_fifos_inst|rx_core_fifos_logic.rx_core_fifos|fifo_data_din_s3_f[0][256]|ENA  ; 0                                    ; 31                                  ; 69                             ;        ;
+; ed_top_wrapper_typ2_inst|ip2hdm_reset_n_f~SynDup_44  ; --                        ; ed_top_wrapper_typ2_inst|csr_top_inst|custom_csr_top_inst|memWrite_counter_buf[0]|SCLR                                      ; ed_top_wrapper_typ2_inst|inst_axi_to_avst_bridge|write_tlp_header_address_f[32]|ENA                                            ; 0                                    ; 72                                  ; 30                             ;        ;
+; ed_top_wrapper_typ2_inst|ip2hdm_reset_n_f~SynDup_27  ; --                        ; ed_top_wrapper_typ2_inst|rx_side_inst|rx_hdr_data_fifos_inst|rx_core_fifos_logic.rx_core_fifos|fifo_data_wr_en_s0_f[1]|SCLR ; ed_top_wrapper_typ2_inst|rx_side_inst|rx_hdr_data_fifos_inst|rx_core_fifos_logic.rx_core_fifos|fifo_data_din_s3_f[2][6]|ENA    ; 0                                    ; 83                                  ; 20                             ;        ;
++------------------------------------------------------+---------------------------+-----------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+--------------------------------------+-------------------------------------+--------------------------------+--------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 500
++-----------------------------------------------------------------------+
+; CDC-50002 - 1-Bit Asynchronous Transfer with Insufficient Constraints ;
++-----------------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 500
++----------------------------------------------------------------+
+; CDC-50003 - CE-Type CDC Transfer with Insufficient Constraints ;
++----------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 500
++-----------------------------------------------------------------+
+; CDC-50004 - MUX-type CDC Transfer with Insufficient Constraints ;
++-----------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 500
++-----------------------------------------------------------------------------------------+
+; CDC-50005 - CDC Bus Constructed with Multi-bit Synchronizer Chains of Different Lengths ;
++-----------------------------------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 500
++---------------------------------------------------------------+
+; CDC-50006 - CDC Bus Constructed with Unsynchronized Registers ;
++---------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 500
++-----------------------------------------------------------+
+; CDC-50011 - Combinational Logic Before Synchronizer Chain ;
++-----------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 500
++-----------------------------------------------------------------+
+; CDC-50012 - Multiple Clock Domains Driving a Synchronizer Chain ;
++-----------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++--------------------------------------+
+; CLK-30026 - Missing Clock Assignment ;
++--------------------------------------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++----------------------------------------------+
+; CLK-30027 - Multiple Clock Assignments Found ;
++----------------------------------------------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++-------------------------------------+
+; CLK-30028 - Invalid Generated Clock ;
++-------------------------------------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++---------------------------------------+
+; CLK-30029 - Invalid Clock Assignments ;
++---------------------------------------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++-----------------------------------+
+; CLK-30030 - PLL Setting Violation ;
++-----------------------------------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++--------------------------------------------+
+; CLK-30033 - Invalid Clock Group Assignment ;
++--------------------------------------------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++----------------------------------------------------------------------------+
+; CLK-30034 - Clock Pairs Missing Logically Exclusive Clock Group Assignment ;
++----------------------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++-----------------------------------------------------------------------------+
+; CLK-30035 - Clock Pairs Missing Physically Exclusive Clock Group Assignment ;
++-----------------------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++----------------------------------------+
+; CLK-30042 - Incorrect Clock Group Type ;
++----------------------------------------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 500
++----------------------------------------------------+
+; RES-50001 - Asynchronous Reset Is Not Synchronized ;
++----------------------------------------------------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 500
++---------------------------------------------------------------+
+; RES-50002 - Asynchronous Reset is Insufficiently Synchronized ;
++---------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 500
++--------------------------------------------------------------+
+; RES-50003 - Asynchronous Reset with Insufficient Constraints ;
++--------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 500
++--------------------------------------------------------------------------+
+; RES-50004 - Multiple Asynchronous Resets within Reset Synchronizer Chain ;
++--------------------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++--------------------------------------------+
+; TMC-20011 - Missing Input Delay Constraint ;
++--------------------------------------------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++---------------------------------------------+
+; TMC-20012 - Missing Output Delay Constraint ;
++---------------------------------------------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++---------------------------------+
+; TMC-20013 - Partial Input Delay ;
++---------------------------------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++----------------------------------+
+; TMC-20014 - Partial Output Delay ;
++----------------------------------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++----------------------------------------+
+; TMC-20015 - Inconsistent Min-Max Delay ;
++----------------------------------------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++-----------------------------------+
+; TMC-20016 - Invalid Reference Pin ;
++-----------------------------------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++----------------------------+
+; TMC-20017 - Loops Detected ;
++----------------------------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++-------------------------------------------+
+; TMC-20019 - Partial Multicycle Assignment ;
++-------------------------------------------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++-----------------------------------------------------+
+; TMC-20022 - I/O Delay Assignment Missing Parameters ;
++-----------------------------------------------------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++----------------------------------------------+
+; TMC-20023 - Invalid Set Net Delay Assignment ;
++----------------------------------------------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++-------------------------------------------------------+
+; TMC-20027 - Collection Filter Matching Multiple Types ;
++-------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		High
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++-----------------------------------------------------+
+; TMC-30041 - Constraint with Invalid Clock Reference ;
++-----------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++------------------------------------------------------------+
+; CDC-50103 - Unsynchronized Intra-Clock Forced Synchronizer ;
++------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++-------------------------------------------+
+; CLK-30031 - Input Delay Assigned to Clock ;
++-------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++------------------------------------+
+; CLK-30032 - Improper Clock Targets ;
++------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	
+		max_violations = 5000
+		device_ram_occupation = 80
+		low_utilization = 10
++-----------------------------------------------------------+
+; FLP-10000 - Physical RAM with Utilization Below Threshold ;
++-----------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++-----------------------------------------------+
+; LNT-30023 - Reset Nets with Polarity Conflict ;
++-----------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++--------------------------------------------------------------------------------+
+; RDC-50003 - Multiple Asynchronous Reset Synchronizers in the Same Clock Domain ;
++--------------------------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++------------------------------------------+
+; TMC-20018 - Unsupported Latches Detected ;
++------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++----------------------------------------------+
+; TMC-20021 - Partial Min-Max Delay Assignment ;
++----------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++-----------------------------------------------+
+; TMC-20024 - Synchronous Data Delay Assignment ;
++-----------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++-----------------------------------------------+
+; TMC-20025 - Ignored or Overridden Constraints ;
++-----------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	
+		max_violations = 5000
+		maximum_setup_slack = 0
+		to_clock_filter = "*"
++-----------------------------------------------------------------------+
+; TMC-20200 - Paths Failing Setup Analysis with Impossible Requirements ;
++-----------------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	
+		max_violations = 5000
+		maximum_setup_slack = 0
+		to_clock_filter = "*"
++---------------------------------------------------------------+
+; TMC-20201 - Paths Failing Setup Analysis with High Clock Skew ;
++---------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	
+		max_violations = 5000
+		maximum_setup_slack = 0
+		to_clock_filter = "*"
++----------------------------------------------------------------------------------+
+; TMC-20204 - Endpoints of Paths Failing Setup Analysis with Retiming Restrictions ;
++----------------------------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	
+		max_violations = 5000
+		maximum_setup_slack = 0
+		to_clock_filter = "*"
++------------------------------------------------------------------------------------------------------------+
+; TMC-20205 - Endpoints of Paths Failing Setup Analysis with Explicit Power-Up States that Restrict Retiming ;
++------------------------------------------------------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	
+		max_violations = 5000
+		maximum_setup_slack = 0
+		to_clock_filter = "*"
++------------------------------------------------------------------------------------------------------+
+; TMC-20206 - DSP Blocks with Unregistered Outputs that are the Source of Paths Failing Setup Analysis ;
++------------------------------------------------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	
+		max_violations = 5000
+		maximum_setup_slack = 0
+		to_clock_filter = "*"
++----------------------------------------------------------------------------------------------------------+
+; TMC-20207 - DSP Blocks with Unregistered Inputs that are the Destination of Paths Failing Setup Analysis ;
++----------------------------------------------------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	
+		max_violations = 5000
+		maximum_setup_slack = 0
+		to_clock_filter = "*"
++------------------------------------------------------------------------------------------------------+
+; TMC-20208 - RAM Blocks with Unregistered Outputs that are the Source of Paths Failing Setup Analysis ;
++------------------------------------------------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	
+		max_violations = 5000
+		maximum_setup_slack = 0
+		to_clock_filter = "*"
++------------------------------------------------------------------------------------+
+; TMC-20209 - Paths Failing Setup Analysis with High Routing Delay due to Congestion ;
++------------------------------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	
+		max_violations = 5000
+		maximum_setup_slack = 0
+		to_clock_filter = "*"
++---------------------------------------------------------------------------------+
+; TMC-20210 - Paths Failing Setup Analysis with High Routing Delay Added for Hold ;
++---------------------------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	
+		max_violations = 5000
+		maximum_setup_slack = 0
+		to_clock_filter = "*"
++---------------------------------------------------------------------------+
+; TMC-20212 - Paths Failing Setup Analysis with Global Routing in Data Path ;
++---------------------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	
+		max_violations = 5000
+		maximum_setup_slack = 0
+		to_clock_filter = "*"
++--------------------------------------------------------------------+
+; TMC-20213 - Paths Failing Setup Analysis with Locally Routed Clock ;
++--------------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	
+		max_violations = 5000
+		maximum_setup_slack = 0
+		to_clock_filter = "*"
+		minimum_number_of_adders = 3
++----------------------------------------------------------------------------------------------------+
+; TMC-20214 - Buses with Incoming Paths Failing Setup Analysis with Multiple Sequential Adder Chains ;
++----------------------------------------------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	
+		max_violations = 5000
+		maximum_setup_slack = 0
+		to_clock_filter = "*"
+		minimum_number_of_soft_mult_chains = 2
++----------------------------------------------------------------------------------------------------+
+; TMC-20215 - Buses with Incoming Paths Failing Setup Analysis with Multipliers Implemented in Logic ;
++----------------------------------------------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	
+		max_violations = 5000
+		maximum_setup_slack = 0
+		to_clock_filter = "*"
++-------------------------------------------------------------------------------------+
+; TMC-20216 - Paths Failing Setup Analysis with Inferred-RAM Shift Register Endpoints ;
++-------------------------------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	
+		max_violations = 5000
+		maximum_setup_slack = 0
+		to_clock_filter = "*"
++-------------------------------------------------------------+
+; TMC-20217 - Paths Failing Setup Analysis with Clock-As-Data ;
++-------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	
+		max_violations = 5000
+		maximum_pulse_width_slack = 0
++-----------------------------------------------------------------+
+; TMC-20219 - DSP Blocks with Restricted Fmax below Required Fmax ;
++-----------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	
+		max_violations = 5000
+		maximum_pulse_width_slack = 0
++-----------------------------------------------------------------+
+; TMC-20220 - RAM Blocks with Restricted Fmax below Required Fmax ;
++-----------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	
+		max_violations = 5000
+		maximum_pulse_width_slack = 0
++---------------------------------------------------------------------------+
+; TMC-20221 - Nodes Failing Minimum Pulse Width Due to Clock Pulse Collapse ;
++---------------------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	
+		max_violations = 5000
+		maximum_hold_slack = 0
+		to_clock_filter = "*"
++--------------------------------------------------------------------------+
+; TMC-20312 - Paths Failing Hold Analysis with Global Routing in Data Path ;
++--------------------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	
+		max_violations = 5000
+		maximum_hold_slack = 0
+		to_clock_filter = "*"
++-------------------------------------------------------------------+
+; TMC-20313 - Paths Failing Hold Analysis with Locally Routed Clock ;
++-------------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	
+		max_violations = 5000
+		maximum_recovery_slack = 0
+		to_clock_filter = "*"
++------------------------------------------------------------------------------+
+; TMC-20712 - Paths Failing Recovery Analysis with Global Routing in Data Path ;
++------------------------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	
+		max_violations = 5000
+		maximum_recovery_slack = 0
+		to_clock_filter = "*"
++-----------------------------------------------------------------------+
+; TMC-20713 - Paths Failing Recovery Analysis with Locally Routed Clock ;
++-----------------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	
+		max_violations = 5000
+		maximum_removal_slack = 0
+		to_clock_filter = "*"
++-----------------------------------------------------------------------------+
+; TMC-20812 - Paths Failing Removal Analysis with Global Routing in Data Path ;
++-----------------------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Medium
+Number of violations: 	0
+Rule Parameters:      	
+		max_violations = 5000
+		maximum_removal_slack = 0
+		to_clock_filter = "*"
++----------------------------------------------------------------------+
+; TMC-20813 - Paths Failing Removal Analysis with Locally Routed Clock ;
++----------------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Low
+Number of violations: 	0
+Rule Parameters:      	max_violations = 500
++--------------------------------------------------------------------+
+; CDC-50008 - CDC Bus Constructed with Multi-bit Synchronizer Chains ;
++--------------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Low
+Number of violations: 	0
+Rule Parameters:      	max_violations = 500
++-------------------------------------------------+
+; CDC-50101 - Intra-Clock False Path Synchronizer ;
++-------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Low
+Number of violations: 	0
+Rule Parameters:      	max_violations = 500
++-----------------------------------------------------------------+
+; CDC-50102 - Synchronizer after CDC Topology with Control Signal ;
++-----------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Low
+Number of violations: 	0
+Rule Parameters:      	max_violations = 500
++------------------------------------------------------------+
+; RES-50010 - Reset Synchronizer Chains with Constant Output ;
++------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Low
+Number of violations: 	0
+Rule Parameters:      	max_violations = 500
++-------------------------------------------------------+
+; RES-50101 - Intra-Clock False Path Reset Synchronizer ;
++-------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Low
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++-------------------------------------------+
+; TMC-20020 - Invalid Multicycle Assignment ;
++-------------------------------------------+
+
+
+Status:		PASS
+Severity:		Low
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++--------------------------------------------------------------------------------------------+
+; TMC-20550 - Automatically Selected Duplication Candidate Rejected for Placement Constraint ;
++--------------------------------------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Low
+Number of violations: 	0
+Rule Parameters:      	
+		max_violations = 5000
+		avg_dup_fanout = 1000
++-------------------------------------------------------------------------------------------+
+; TMC-20551 - Automatically Selected Duplication Candidate Likely Requires More Duplication ;
++-------------------------------------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Low
+Number of violations: 	0
+Rule Parameters:      	max_violations = 5000
++--------------------------------------------------------------+
+; TMC-20552 - User Selected Duplication Candidate was Rejected ;
++--------------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Low
+Number of violations: 	0
+Rule Parameters:      	
+		max_violations = 5000
+		minimum_tension = 100000
+		minimum_sinks = 2
++-----------------------------------------------------------+
+; TMC-20601 - Registers with High Immediate Fan-Out Tension ;
++-----------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Low
+Number of violations: 	0
+Rule Parameters:      	
+		max_violations = 5000
+		minimum_span = 250
+		minimum_sinks = 2
++--------------------------------------------------------+
+; TMC-20603 - Registers with High Immediate Fan-Out Span ;
++--------------------------------------------------------+
+
+
+Status:		PASS
+Severity:		Low
+Number of violations: 	0
+Rule Parameters:      	
+		max_violations = 5000
+		minimum_span = 250
+		ignore_high_fanout_span = False
+		minimum_sinks = 2
++-----------------------------------------------------------+
+; TMC-20604 - Registers with High Timing Path Endpoint Span ;
++-----------------------------------------------------------+
+
+

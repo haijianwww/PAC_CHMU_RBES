@@ -1,0 +1,12 @@
+# **************************************************
+# Quartus Prime Version 24.3.0
+# Process ID 75108
+# Start logging TCL commands
+# Mon Nov 3 18:35:11 2025
+# **************************************************
+project_open "C:/Users/11755/Downloads/PAC_CHMU/Intel/hardware_test_design/cxltyp2_ed.qpf" -revision cxltyp2_ed
+project_open "C:/Users/11755/Downloads/PAC_CHMU/Intel/hardware_test_design/cxltyp2_ed.qpf"
+# **************************************************
+# Mon Nov 3 18:36:02 2025
+# End of logging TCL commands
+# **************************************************

@@ -1,0 +1,20 @@
+Fitter Status : Successful - Tue Oct 28 11:04:28 2025
+Quartus Prime Version : 24.3.0 Build 212 11/18/2024 SC Pro Edition
+Revision Name : cxltyp2_ed
+Top-level Entity Name : cxltyp2_ed
+Family : Agilex 7
+Device : AGIB027R29A1E2VR3
+Timing Models : Preliminary
+Power Models : Final
+Device Status : Preliminary
+Logic utilization (in ALMs) : 142,224 / 912,800 ( 16 % )
+  * Logic utilization warning : A large number of ALMs contain virtual pins and count towards logic utilization
+  * ALMs containing virtual pins : 1,121 / 912,800 ( < 1 % )
+Total dedicated logic registers : 321936
+Total pins : 203 / 1,040 ( 20 % )
+Total block memory bits : 22,544,984 / 271,810,560 ( 8 % )
+Total RAM Blocks : 1,936 / 13,272 ( 15 % )
+Total DSP Blocks : 0 / 8,528 ( 0 % )
+Total HSSI HPS : 0 / 1 ( 0 % )
+Total HSSI R-Tiles : 1 / 3 ( 33 % )
+Total PLLs : 4 / 36 ( 11 % )

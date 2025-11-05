@@ -1,0 +1,12 @@
+# **************************************************
+# Quartus Prime Version 24.3.0
+# Process ID 31096
+# Start logging TCL commands
+# Wed Nov 5 15:57:20 2025
+# **************************************************
+project_open "C:/Users/11755/Downloads/PAC_claude/Intel/hardware_test_design/cxltyp2_ed.qpf" -revision cxltyp2_ed
+project_close
+# **************************************************
+# Wed Nov 5 16:13:39 2025
+# End of logging TCL commands
+# **************************************************

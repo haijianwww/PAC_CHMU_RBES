@@ -1,0 +1,26 @@
+# **************************************************
+# Quartus Prime Version 24.3.0
+# Process ID 60860
+# Start logging UI actions
+# Sun Nov 2 23:35:27 2025
+# **************************************************
+[Sun Nov  2 23:35:55 2025] [Action triggered] Window title: 'Quartus Prime Pro Edition - C:/Users/11755/Downloads/PAC_CHMU/Intel/hardware_test_design/cxltyp2_ed - cxltyp2_ed [*]' | P&rocessing > 'Compilation Dashboard' was pressed
+[Sun Nov  2 23:38:31 2025] [Action triggered] Window title: 'Quartus Prime Pro Edition - C:/Users/11755/Downloads/PAC_CHMU/Intel/hardware_test_design/cxltyp2_ed - cxltyp2_ed [*]' | &File > 'Programming File Generator...' was pressed
+[Sun Nov  2 23:38:42 2025] Window title: 'Programming File Generator - C:/Users/11755/Downloads/PAC_CHMU/Intel/hardware_test_design/cxltyp2_ed - cxltyp2_ed [*]' | 'm_mode_combo' combo box changed to: 'AVST x8'
+[Sun Nov  2 23:43:00 2025] Window title: 'Add Device' | 'm_device_combo' combo box changed to: 'CFI_2Gb'
+[Sun Nov  2 23:43:02 2025] Window title: 'Add Device' | QPushButton 'OK' pressed!
+[Sun Nov  2 23:43:27 2025] Window title: 'Edit Partition' | 'm_address_mode_combo' combo box changed to: 'Start'
+[Sun Nov  2 23:43:48 2025] Window title: 'Edit Partition' | QPushButton 'OK' pressed!
+[Sun Nov  2 23:43:48 2025] Window title: 'Programming File Generator - C:/Users/11755/Downloads/PAC_CHMU/Intel/hardware_test_design/cxltyp2_ed - cxltyp2_ed [*]' | QPushButton 'Edit...' pressed!
+[Sun Nov  2 23:43:58 2025] Window title: 'Add Partition' | 'm_address_mode_combo' combo box changed to: 'Start'
+[Sun Nov  2 23:44:04 2025] Window title: 'Add Partition' | QPushButton 'OK' pressed!
+[Sun Nov  2 23:44:04 2025] Window title: 'Programming File Generator - C:/Users/11755/Downloads/PAC_CHMU/Intel/hardware_test_design/cxltyp2_ed - cxltyp2_ed [*]' | QPushButton 'Add Partition...' pressed!
+[Sun Nov  2 23:44:25 2025] Window title: 'Programming File Generator' | QPushButton 'OK' pressed!
+[Sun Nov  2 23:44:25 2025] Window title: 'Programming File Generator - C:/Users/11755/Downloads/PAC_CHMU/Intel/hardware_test_design/cxltyp2_ed - cxltyp2_ed [*]' | QPushButton '&Generate' pressed!
+[Sun Nov  2 23:44:31 2025] Window title: 'Programming File Generator' | QPushButton 'OK' pressed!
+[Sun Nov  2 23:44:31 2025] Window title: 'Programming File Generator - C:/Users/11755/Downloads/PAC_CHMU/Intel/hardware_test_design/cxltyp2_ed - cxltyp2_ed [*]' | QPushButton '&Generate' pressed!
+[Sun Nov  2 23:44:49 2025] Window title: 'Programming File Generator - C:/Users/11755/Downloads/PAC_CHMU/Intel/hardware_test_design/cxltyp2_ed - cxltyp2_ed [*]' | QPushButton 'Edit...' pressed!
+[Sun Nov  2 23:45:01 2025] Window title: 'Edit Partition' | 'm_input_file_combo' combo box changed to: 'Bitstream_1 (cxltyp2_ed_chmu_intel.sof)'
+[Sun Nov  2 23:45:04 2025] Window title: 'Edit Partition' | QPushButton 'OK' pressed!
+[Sun Nov  2 23:45:04 2025] Window title: 'Programming File Generator - C:/Users/11755/Downloads/PAC_CHMU/Intel/hardware_test_design/cxltyp2_ed - cxltyp2_ed [*]' | QPushButton 'Edit...' pressed!
+[Sun Nov  2 23:46:01 2025] Window title: 'Programming File Generator' | QPushButton 'OK' pressed!
